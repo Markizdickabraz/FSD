@@ -1,3 +1,4 @@
+
 // кубік бізаір
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -102,3 +103,26 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
   
+
+$colors: (
+'main-background-color': #84A178,
+'main-yellow': #F8D24E,
+'main-text-black': #131313,
+'modalback-and-textcolor-white': #FCFCFC,
+
+'product-ingredients-green': #AEC6A5,
+'product-background-yellow': #EFD478,
+'product-text-babyshit': #D6936D,
+'bright-green-btn': #0A8817,
+
+'personal-info-background': rgba(248, 210, 78, 0.1),
+'text-grey': #ABABAB,
+'all-rights-text': #7A7A7A,
+);
+
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+

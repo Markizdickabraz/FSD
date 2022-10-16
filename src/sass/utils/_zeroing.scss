@@ -13,7 +13,7 @@ ul {
 }
 
 body {
-    font-family: roboto, sens-serif;
+    @include base-fonts;
 }
 
 .container {

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*body base fonts*/
+/*кнопки*/
+/*nav-menu fonts*/
+/*hero fonts*/
+/*заголовок*/
+/*якірні посилання*/
+/*кількість кафе і вагончиків*/
+/*lorem in hero*/
+/*section products*/
+/*section about*/
+/*section advantages*/
+/*section customer reviews*/
+/*section contacts*/
+/*footer*/
+/*modal windows*/
+/* Modal Buy now*/
+/* Modal ingredients відрізняється від інших модалок*/
+.toggle-button {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .toggle-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  z-index: 999;
+  overflow: scroll;
+}
+@media screen and (min-width: 1199px) {
+  .menu-container {
+    visibility: hidden;
+  }
+}
+
+.nav-site {
+  display: flex;
+}
+.nav-site__link {
+  text-decoration: none;
+}
+
+.nav-site_item,
+.toggle-menu_item {
+  list-style: none;
+}
+
+.nav-container {
+  display: flex;
+}/*# sourceMappingURL=index.css.map */

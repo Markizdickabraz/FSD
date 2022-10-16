@@ -1,3 +1,109 @@
+
+// кубік бізаір
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+//   Міксини для стилізації кнопок:
+// button() - для звичайної кнопки з суцільною заливкою
+// button--transparent() - для прозорої кнопки 
+// якщо кнопка зменшується на мобілках та планшетах, то ДОДАТКОВО додаємо міксин
+// button--adaptive()
+// якщо кнопка містить стрілочку, то ДОДАТКОВО додаємо міксин
+// arrow-for-button($space-before-arrow, $space-after-arrow)
+// $space-before-arrow - відступ від тексту до стрілки
+// $space-after-arrow - відступ від стрілки до краю кнопки (правий паддінг)
+
+%button-placeholder {
+    cursor: pointer;
+  
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    color: #000000;
+  
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 34px;
+    padding-right: 34px;
+  
+    border-radius: 10px;
+  
+    &:focus {
+      color: #FCFCFC;
+    }
+  }
+  
+  @mixin button() {
+    @extend %button-placeholder;
+  
+    border: none;
+  
+    background-color: #f8d24e;
+    
+    &:hover,
+    &:focus {
+      background-color: #0A8817;
+    }
+  
+    &:disabled {
+      background-color: #ABABAB;
+    }
+  }
+  
+  @mixin button--transparent() {
+    @extend %button-placeholder;
+  
+    background-color: transparent;
+  
+    border: 2px solid #f8d24e;
+    
+    &:hover,
+    &:focus {
+      border-color: #0A8817;
+    }
+  
+    &:disabled {
+      border-color: #ABABAB;
+    }
+  }
+  
+  @mixin button--adaptive() {
+    @media screen and (max-width: 1199px) {
+      font-size: 8px;
+      line-height: calc(10 / 8);
+  
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 10px;
+      padding-right: 10px;
+  
+      border-radius: 8px;
+    }
+  }
+  
+  @mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
+    position: relative;
+    padding-right: 5px + $space-before-arrow + $space-after-arrow;
+  
+    &::after {
+      content: '';
+      display: block;
+  
+      fill: currentColor;
+  
+      background-image: url('./src/images/icons/arrow-for-button.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+  
+      height: 8px;
+      width: 5px;
+      position: absolute;
+      top: calc(50% - 4px);
+      right: 0px + $space-after-arrow;
+    }
+  }
+  
+
 $colors: (
 'main-background-color': #84A178,
 'main-yellow': #F8D24E,
@@ -443,3 +549,5 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 600;
     font-size: 14px;
 }
+
+

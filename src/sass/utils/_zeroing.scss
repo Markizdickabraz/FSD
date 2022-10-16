@@ -1,0 +1,69 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    // margin: 0;
+    padding: 0;
+    // padding: 0;
+}
+
+body {
+    @include base-fonts;
+}
+
+.container {
+
+    max-width: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @media screen and(min-width:768px) {
+        max-width: 768px;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    @media screen and(min-width:1200px) {
+        max-width: 1200px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+    }
+}
+
+.img {
+    display: block;
+}
+
+.list {
+    list-style: none;
+    // display: block;
+}
+
+.link {
+    text-decoration: none;
+    display: block;
+    // color: currentColor;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

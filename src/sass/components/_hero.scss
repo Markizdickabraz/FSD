@@ -1,0 +1,77 @@
+.hero {
+    background-color: getColor('main-background-color');
+
+    &__container {
+        height: 392px;
+        padding: 0;
+        position: relative;
+        background-repeat: no-repeat;
+        background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp);
+        background-image: url(../images/mobile/main/pointshero-mobile@1x.webp);
+        
+
+        @media screen and (min-width: 768px) {
+                height: 343px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                height: 384px;
+            }
+                        
+    }
+
+    
+
+    &__title {
+        display: block;
+        width: 247px;
+        margin-bottom: 32px;
+        color: #FCFCFC;
+        @include hero_title-fonts;
+
+        @media screen and (min-width: 768px) {
+                width: 181px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                width: 367px;
+            }
+    }
+
+}
+
+.anchors {
+    display: flex;
+    gap: 8px;
+    
+    @media screen and (min-width: 1200px) {
+            gap: 12px;
+        }
+
+    &__products {
+        color: #131313;
+        @include anchors_link-fonts;
+        text-decoration: none;
+
+        border: 2px solid #F8D24E;
+        border-radius: 10px;
+    }
+
+    &__about {
+        color: #F8D24E;
+        @include anchors_link-fonts;
+    }
+
+}
+
+.block-gallery {
+    display: none;
+    &__text {
+            color: #FCFCFC;
+            @include hero_text-fonts;
+        }
+}
+
+.institutions {
+    display: none;
+}

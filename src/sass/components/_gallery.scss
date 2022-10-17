@@ -1,4 +1,6 @@
 .gallery {
+    // padding-top: 200px;
+
     background-image: url('../images/mobile/main/background2@1x.jpg');
 
     @media (min-device-pixel-ratio: 2),
@@ -49,7 +51,36 @@
     }
 }
 
+.gallery__slider {
+  width: 100%;
+
+  transform: translateY(-30px);
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(-200px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    transform: translateY(-130px);
+  }
+}
+
+.gallery__slide {
+  width: 100%;
+}
+
 .gallery__slide-container {
-    display: block;
-    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+
+    @media screen and (min-width: 768px) {
+      height: 400px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      height: 500px;
+    }
 }

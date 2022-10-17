@@ -9,9 +9,8 @@
     opacity: 1;
     transition: opacity 250ms($cubic-bezier), visibility 250ms($cubic-bezier);
 
-    @media screen and (max-width:768px) {
-      padding: 94px 15px;
-    }
+    z-index: 100;
+
 }
 
 .backdrop.is-hidden {
@@ -19,25 +18,30 @@
     // pointer-events: none;
     // visibility: hidden;
     
-    .backdrop.is-hidden & {
-        transform: translate(-50%, -50%) scale(0.9);
-    }
+    // .backdrop.is-hidden & {
+    //     transform: translate(-50%, -50%) scale(0.9);
+    // }
 }
 
 .modal {
-    padding: 40px;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px;
+
     // overflow: scroll;
+    width: 280px;
     
-    // background-color: $primary-bg-color;
+    background-color: getColor('modalback-and-textcolor-white');
     // box-shadow: $box-shadow-modal;
-    border-radius: 4px;
+    border-radius: 10px;
+    border: 2px solid #F8D24E;
       
     @media screen and (min-width: 480px) {
       position: absolute;
-      width: 450px;
-      top: 50%;
-      left: 50%;
+   
+    //   top: 50%;
+    //   left: 50%;
 
     }
   
@@ -128,19 +132,34 @@
     flex-direction: column;
 }
 
-.kind_icecream {
+// .kind_icecream {
+//     position: absolute;
+//     z-index: -1;
+//     // opacity: 0;
+
+//     &::before {
+//         content: '';
+//         display: block;
+//         width: 132px;
+//         height: 136px;
+//         border-radius: 10px;
+
+//         border: 1px solid #F8D24E;
+//         background-color: #84A178;
+//     }
+// }
+
+.kind-icecream {
+    appearance: none;
+
     position: absolute;
-    z-index: -1;
-    // opacity: 0;
+}
 
-    &::before {
-        content: '';
-        display: block;
-        width: 132px;
-        height: 136px;
-        border-radius: 10px;
-
-        border: 1px solid #F8D24E;
-        background-color: #84A178;
-    }
+.checkbox-bg--green {
+    display: inline-block;
+    width: 132px;
+    height: 140px;
+    border: 2px solid #96AF8C;
+    border-radius: 12px;
+    background-color: getColor('modalback-and-textcolor-white');
 }

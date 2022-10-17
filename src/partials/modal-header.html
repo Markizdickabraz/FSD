@@ -12,7 +12,7 @@
         >
 
 	<div role="group">
-		<input type="checkbox" name="kind" value="ice-cream" id="ice-cream">
+		<input type="checkbox" name="kind" value="ice-cream" id="ice-cream" class="kind_icecream">
 		<label for="ice-cream">ice cream</label>
 
 		<input type="checkbox" name="kind" value="ice-coffee" id="ice-coffee">
@@ -21,11 +21,13 @@
 		<input type="checkbox" name="kind" value="milkshake" id="milkshake">
 		<label for="ice-cream">milkshake</label>
 	</div>
+
+    <div class="form-header">
         <label class="form-header__field">
             <input type="text" name="name" placeholder="Name" class="form-header__input" />
         </label>
 
-        <label class="form__field">
+        <label class="form-header__field">
             <input type="tel" name="tel" placeholder="Phone" class="form-header__input" />
         </label>
 
@@ -36,11 +38,14 @@
           cols="30"
           rows="10"
           placeholder="Comment"
-          class="form__comment"
+          class="form-header__comment"
         ></textarea>
       </label>
+    </div>
 
+    <div class="header-submit">
       <button type="submit" class="button-form button">Submit</button>
+    </div>
     </form>
   </div>
 </div>

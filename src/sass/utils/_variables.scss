@@ -17,13 +17,9 @@ $main-transition-time: 250ms;
 
 @mixin button-base() {
     cursor: pointer;
-  
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: calc(18 / 14);
 
-    // @include base-fonts();
+    @include base-fonts();
+    @include btn-fonts();
   
     padding-top: 12px;
     padding-bottom: 12px;
@@ -36,10 +32,10 @@ $main-transition-time: 250ms;
       background-color $main-transition-time $cubic-bezier, 
       background-color $main-transition-time $cubic-bezier;
 
-      color: getColor('main-text-black');
-      &:focus {
-          color: getColor('modalback-and-textcolor-white');
-        }
+    color: getColor('main-text-black');
+    &:focus {
+        color: getColor('modalback-and-textcolor-white');
+    }
   }
   
   @mixin button() {
@@ -48,11 +44,6 @@ $main-transition-time: 250ms;
     border: none;
   
     background-color: getColor('main-yellow');
-
-    // color: getColor('main-text-black');
-    // &:focus {
-    //     color: getColor('modalback-and-textcolor-white');
-    //   }
     
     &:hover,
     &:focus {
@@ -70,11 +61,6 @@ $main-transition-time: 250ms;
     background-color: transparent;
   
     border: 2px solid getColor('main-yellow');
-
-    // color: getColor('main-text-black');
-    // &:focus {
-    //     color: getColor('modalback-and-textcolor-white');
-    //   }
     
     &:hover,
     &:focus {

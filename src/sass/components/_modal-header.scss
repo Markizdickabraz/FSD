@@ -149,11 +149,24 @@
 //     }
 // }
 
-.kind-icecream {
-    appearance: none;
-
-    position: absolute;
+.group {
+    display: flex;
+    flex-direction: column;
 }
+
+.relative {
+
+    position: relative;
+}
+
+.kind-icecream {
+    position: absolute;
+    appearance: none;
+}
+
+
+
+
 
 .checkbox--green,
 .checkbox--yellow,
@@ -166,11 +179,11 @@
 }
 
 .checkbox--green {
-    border: 2px solid #96AF8C;
+    border: 2px solid #84A178;
 }
 
 .kind-icecream:checked + .checkbox--green {
-    background-color: #96AF8C;
+    background-color: getColor('main-background-color');
 }
 
 .checkbox--yellow {
@@ -179,4 +192,12 @@
 
 .kind-icecream:checked + .checkbox--yellow {
     background-color: getColor('product-background-yellow');
+}
+
+.checkbox--orange {
+    border: 2px solid #D6936D;
+}
+
+.kind-icecream:checked + .checkbox--orange {
+    background-color: getColor('product-text-babyshit');
 }

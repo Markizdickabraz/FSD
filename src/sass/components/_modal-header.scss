@@ -155,11 +155,28 @@
     position: absolute;
 }
 
-.checkbox-bg--green {
+.checkbox--green,
+.checkbox--yellow,
+.checkbox--orange {
     display: inline-block;
     width: 132px;
     height: 140px;
-    border: 2px solid #96AF8C;
     border-radius: 12px;
     background-color: getColor('modalback-and-textcolor-white');
+}
+
+.checkbox--green {
+    border: 2px solid #96AF8C;
+}
+
+.kind-icecream:checked + .checkbox--green {
+    background-color: #96AF8C;
+}
+
+.checkbox--yellow {
+    border: 2px solid #EFD478;
+}
+
+.kind-icecream:checked + .checkbox--yellow {
+    background-color: getColor('product-background-yellow');
 }

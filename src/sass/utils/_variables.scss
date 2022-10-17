@@ -1,6 +1,9 @@
 
+//   Змінні для переходів та анімацій:
 // кубік бізаір
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+// стандартний час переходу
+$main-transition-time: 250ms;
 
 //   Міксини для стилізації кнопок:
 // button() - для звичайної кнопки з суцільною заливкою
@@ -27,6 +30,10 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     padding-right: 34px;
   
     border-radius: 10px;
+
+    transition: color $main-transition-time $cubic-bezier, 
+      background-color $main-transition-time $cubic-bezier, 
+      background-color $main-transition-time $cubic-bezier;
   
     &:focus {
       color: #FCFCFC;
@@ -91,7 +98,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   
       fill: currentColor;
   
-      background-image: url('./images/icons/arrow-for-button.svg');
+      background-image: url('../images/sprite.svg#button-arrow');
       background-repeat: no-repeat;
       background-size: contain;
   

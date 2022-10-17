@@ -44,5 +44,9 @@
 <symbol id="icon-arrow-defoult" viewBox="0 0 69 32">
 <path d="M68.081 17.414a2 2 0 0 0 0-2.829L55.353 1.857a2 2 0 1 0-2.828 2.828l11.314 11.314-11.314 11.314a2 2 0 1 0 2.828 2.828l12.728-12.728zM0 18h66.667v-4H0v4z"/>
 </symbol>
+ <!-- стрілочка для кнопок -->
+<symbol id="button-arrow" viewBox="0 0 7 10" fill="none">
+  <path d="m1 1 4.948 4L1 9" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </defs>
 </svg>

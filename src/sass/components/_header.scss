@@ -1,6 +1,44 @@
+.header {
+  background-color: getColor('main-background-color');
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50px;
+  // padding-bottom: 8px;
+
+  position: relative;
+
+  @media screen and (min-width: 768px){
+    height: 66px;
+  }  
+}
+
+.nav-site {
+  display: flex;
+  gap: 27px;
+  
+  &__link {
+  padding-top: 14px;
+  padding-bottom: 14px;
+    
+  color: getColor('modalback-and-textcolor-white');
+
+  @include nav-fonts;
+  transition: color 250ms($cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: getColor('main-yellow');
+  }
+  }
+}
+
 .toggle-button {
     position: absolute;
-    top: 5px;
+    top: 16px;
     right: 15px;
   
     margin: 0;
@@ -9,6 +47,11 @@
     background-color: transparent;
     cursor: pointer;
     overflow:hidden;
+
+    @media screen and (min-width: 768px){
+      top: 30px;
+      right: 208px;
+    }
   
     @media screen and (min-width: 1200px) {
       display: none;
@@ -16,12 +59,20 @@
 }
 
 .header-button {
+  @include button();
+  @include base-fonts;
+
+  width: 152px;
+  margin-right: auto;
+
   @media screen and (max-width: 767px) {
     display: none;
-}
+  }
 }
   
 .menu {
+  // @include nav-fonts;
+
     @media screen and (max-width: 1199px) {
         display: none;
     }
@@ -47,20 +98,10 @@
     visibility: hidden;
   }
 }
-  
-.nav-site {
-    display: flex;
-  
-    &__link {
-    text-decoration: none;
-    }
-}
-  
+
+
 .nav-site_item,
 .toggle-menu_item {
     list-style: none;
 }
   
-.nav-container {
-    display: flex;
-}

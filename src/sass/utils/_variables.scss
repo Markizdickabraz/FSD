@@ -1,6 +1,9 @@
 
+//   Змінні для переходів та анімацій:
 // кубік бізаір
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+// стандартний час переходу
+$main-transition-time: 250ms;
 
 //   Міксини для стилізації кнопок:
 // button() - для звичайної кнопки з суцільною заливкою
@@ -12,14 +15,11 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 // $space-before-arrow - відступ від тексту до стрілки
 // $space-after-arrow - відступ від стрілки до краю кнопки (правий паддінг)
 
-%button-placeholder {
+@mixin button-base() {
     cursor: pointer;
-  
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: calc(18 / 14);
-    color: #000000;
+
+    @include base-fonts();
+    @include btn-fonts();
   
     padding-top: 12px;
     padding-bottom: 12px;
@@ -27,43 +27,48 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     padding-right: 34px;
   
     border-radius: 10px;
-  
+
+    transition: color $main-transition-time $cubic-bezier, 
+      background-color $main-transition-time $cubic-bezier, 
+      background-color $main-transition-time $cubic-bezier;
+
+    color: getColor('main-text-black');
     &:focus {
-      color: #FCFCFC;
+        color: getColor('modalback-and-textcolor-white');
     }
   }
   
   @mixin button() {
-    @extend %button-placeholder;
+    @include button-base();
   
     border: none;
   
-    background-color: #f8d24e;
+    background-color: getColor('main-yellow');
     
     &:hover,
     &:focus {
-      background-color: #0A8817;
+      background-color: getColor('bright-green-btn');
     }
   
     &:disabled {
-      background-color: #ABABAB;
+      background-color: getColor('text-grey');
     }
   }
   
   @mixin button--transparent() {
-    @extend %button-placeholder;
+    @include button-base();
   
     background-color: transparent;
   
-    border: 2px solid #f8d24e;
+    border: 2px solid getColor('main-yellow');
     
     &:hover,
     &:focus {
-      border-color: #0A8817;
+      border-color: getColor('bright-green-btn');
     }
   
     &:disabled {
-      border-color: #ABABAB;
+      border-color: getColor('text-grey');
     }
   }
   
@@ -91,7 +96,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   
       fill: currentColor;
   
-      background-image: url('./images/icons/arrow-for-button.svg');
+      background-image: url('../images/sprite.svg#button-arrow');
       background-repeat: no-repeat;
       background-size: contain;
   

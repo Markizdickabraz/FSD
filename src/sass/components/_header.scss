@@ -13,62 +13,90 @@
 
   position: relative;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     height: 70px;
     padding-bottom: 10px;
-  }  
+  }
+}
+
+// .nav__button {
+//   @media screen and (min-width:1199px) {
+//     display: none;
+//   }
+
+//   @media screen and (min-width:767px) and (max-width:1199px) {
+//     margin-left: auto;
+//     margin-right: 38px;
+//   }
+
+//   margin-left: auto;
+// }
+.close-modal__btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+
+  @media screen and (min-width:768px) {
+    top: 32px;
+    right: 32px;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: none;
+  }
 }
 
 .nav-site {
   display: flex;
   gap: 27px;
-  
+
   &__link {
-  padding-top: 14px;
-  padding-bottom: 14px;
-    
-  color: getColor('modalback-and-textcolor-white');
+    padding-top: 14px;
+    padding-bottom: 14px;
 
-  @include nav-fonts;
-  transition: color 250ms($cubic-bezier);
+    color: getColor('modalback-and-textcolor-white');
 
-  &:hover,
-  &:focus {
-    color: getColor('main-yellow');
-  }
-  }
-}
+    @include nav-fonts;
+    transition: color 250ms($cubic-bezier);
 
-.toggle-button {
-    position: absolute;
-    top: 16px;
-    right: 15px;
-  
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    overflow:hidden;
-
-    @media screen and (min-width: 768px){
-      top: 32px;
-      right: 208px;
+    &:hover,
+    &:focus {
+      color: getColor('main-yellow');
     }
-  
-    @media screen and (min-width: 1200px) {
-      display: none;
   }
 }
 
-.toggle-button--close {
-  right: 20px;
+.nav__button {
+  padding-top: 16px;
+  margin-left: auto;
 
-  @media screen and (min-width: 768px){
-    top: 30px;
-    right: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
   }
 }
+
+// .toggle-button--close {
+//   right: 20px;
+
+//   @media screen and (min-width: 768px) {
+//     top: 30px;
+//     right: 32px;
+//   }
+// }
 
 .header-button {
   @include button();
@@ -81,18 +109,18 @@
     display: none;
   }
 }
-  
+
 .menu {
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
-  
+
 .menu-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -101,27 +129,27 @@
   padding-top: 100px;
   padding-bottom: 63px;
   background-color: getColor('main-background-color');
-    
-  // transform: translateX(100%);
+
+  transform: translateX(100%);
   transition: transform 250ms($cubic-bezier);
-  
+
   z-index: 999;
   overflow: scroll;
-  
-  @media screen and (min-width:1199px){
+
+  @media screen and (min-width:1199px) {
     visibility: hidden;
   }
 }
 
-// .menu-container.is-open {
-//   transform: translateX(0);
-// }
+.menu-container.is-open {
+  transform: translateX(0);
+}
 
 .nav-site_item,
 .toggle-menu_item {
-    list-style: none;
+  list-style: none;
 }
-  
+
 .toggle-menu {
   display: flex;
   flex-direction: column;
@@ -154,4 +182,3 @@
 
   width: 152px;
 }
-

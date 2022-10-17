@@ -15,13 +15,15 @@ $main-transition-time: 250ms;
 // $space-before-arrow - відступ від тексту до стрілки
 // $space-after-arrow - відступ від стрілки до краю кнопки (правий паддінг)
 
-%button-placeholder {
+@mixin button-base() {
     cursor: pointer;
   
     font-family: inherit;
     font-weight: 600;
     font-size: 14px;
     line-height: calc(18 / 14);
+
+    // @include base-fonts();
   
     padding-top: 12px;
     padding-bottom: 12px;
@@ -33,19 +35,24 @@ $main-transition-time: 250ms;
     transition: color $main-transition-time $cubic-bezier, 
       background-color $main-transition-time $cubic-bezier, 
       background-color $main-transition-time $cubic-bezier;
+
+      color: getColor('main-text-black');
+      &:focus {
+          color: getColor('modalback-and-textcolor-white');
+        }
   }
   
   @mixin button() {
-    @extend %button-placeholder;
+    @include button-base();
   
     border: none;
   
     background-color: getColor('main-yellow');
 
-    color: getColor('main-text-black');
-    &:focus {
-        color: getColor('modalback-and-textcolor-white');
-      }
+    // color: getColor('main-text-black');
+    // &:focus {
+    //     color: getColor('modalback-and-textcolor-white');
+    //   }
     
     &:hover,
     &:focus {
@@ -58,16 +65,16 @@ $main-transition-time: 250ms;
   }
   
   @mixin button--transparent() {
-    @extend %button-placeholder;
+    @include button-base();
   
     background-color: transparent;
   
     border: 2px solid getColor('main-yellow');
 
-    color: getColor('main-text-black');
-    &:focus {
-        color: getColor('modalback-and-textcolor-white');
-      }
+    // color: getColor('main-text-black');
+    // &:focus {
+    //     color: getColor('modalback-and-textcolor-white');
+    //   }
     
     &:hover,
     &:focus {

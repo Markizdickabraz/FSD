@@ -309,21 +309,65 @@ body {
 }
 
 .hero {
-  height: 247px;
   background-color: #84A178;
 }
+.hero__container {
+  height: 392px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp), url(../images/mobile/main/pointshero-mobile@1x.webp);
+  background-position: top 64px left 64px, left 0px bottom 0px;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero__container {
+    background-image: url(../images/mobile/main/icecreamhero-mobile@2x.webp), url(../images/mobile/main/pointshero-mobile@2x.webp);
+  }
+}
+@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .hero__container {
+    background-image: url(../images/mobile/main/icecreamhero-mobile@3x.webp), url(../images/mobile/main/pointshero-mobile@3x.webp);
+  }
+}
 @media screen and (min-width: 768px) {
-  .hero {
+  .hero__container {
     height: 343px;
+    background-size: 270px 350px;
+    background-image: url(../images/tablet/icecreamhero-tablet@1x.webp), url(../images/tablet/pointshero-tablet@1x.webp);
+    background-position: top 0px left 64px, left 0px bottom 0px;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__container {
+    background-image: url(../images/tablet/icecreamhero-tablet@2x.webp), url(../images/tablet/pointshero-tablet@2x.webp);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .hero__container {
+    background-image: url(../images/tablet/icecreamhero-tablet@3x.webp), url(../images/tablet/pointshero-tablet@3x.webp);
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
+  .hero__container {
     height: 384px;
+    background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp), url(../images/desktop/main/pointshero-desktop@1x.webp);
+    background-position: top 64px left 64px, left 0px bottom 0px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__container {
+    background-image: url(../images/desktop/main/icecreamhero-desktop@2x.webp), url(../images/desktop/main/pointshero-desktop@2x.webp);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
+  .hero__container {
+    background-image: url(../images/desktop/main/icecreamhero-desktop@3x.webp), url(../images/desktop/main/pointshero-desktop@3x.webp);
   }
 }
 .hero__title {
+  display: block;
   width: 247px;
+  margin-bottom: 32px;
   color: #FCFCFC;
   font-family: "Seymour One";
   font-size: 26px;
@@ -340,12 +384,12 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .hero {
+  .hero__title {
     width: 181px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
+  .hero__title {
     width: 367px;
   }
 }
@@ -360,12 +404,13 @@ body {
   }
 }
 .anchors__products {
-  color: #131313;
+  padding: 7px 10px;
   font-weight: 600;
   font-size: 8px;
+  color: #131313;
   text-decoration: none;
   border: 2px solid #F8D24E;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 @media screen and (min-width: 1200px) {
   .anchors__products {
@@ -373,9 +418,9 @@ body {
   }
 }
 .anchors__about {
-  color: #F8D24E;
   font-weight: 600;
   font-size: 8px;
+  color: #F8D24E;
 }
 @media screen and (min-width: 1200px) {
   .anchors__about {
@@ -399,6 +444,10 @@ body {
   .block-gallery__text {
     font-size: 14px;
   }
+}
+
+.institutions {
+  display: none;
 }
 
 .products-section {

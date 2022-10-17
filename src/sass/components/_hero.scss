@@ -6,15 +6,64 @@
         position: relative;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(../images/mobile/main/icecreamhero-mobile@2x.webp),url(../images/mobile/main/pointshero-mobile@2x.webp);
+        background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp),
+        url(../images/mobile/main/pointshero-mobile@1x.webp);
         background-position: top 64px left 64px, left 0px bottom 0px;
+
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: url(../images/mobile/main/icecreamhero-mobile@2x.webp),
+                url(../images/mobile/main/pointshero-mobile@2x.webp);
+            }
+        
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and (min-resolution: 3dppx) {
+                background-image: url(../images/mobile/main/icecreamhero-mobile@3x.webp),
+                    url(../images/mobile/main/pointshero-mobile@3x.webp);
+            }
 
         @media screen and (min-width: 768px) {
                 height: 343px;
+                background-image: url(../images/tablet/icecreamhero-tablet@1x.webp),
+                        url(../images/tablet/pointshero-tablet@1x.webp);
+                    background-position: top 42px right 74px, left 0px bottom 0px;
+                
+                    @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                        background-image: url(../images/tablet/icecreamhero-tablet@2x.webp),
+                            url(../images/tablet/pointshero-tablet@2x.webp);
+                    }
+                
+                    @media screen and (min-device-pixel-ratio: 3),
+                    screen and (min-resolution: 288dpi),
+                    screen and (min-resolution: 3dppx) {
+                        background-image: url(../images/tablet/icecreamhero-tablet@3x.webp),
+                            url(../images/tablet/pointshero-tablet@3x.webp);
+                    }
             }
         
             @media screen and (min-width: 1200px) {
-                height: 384px;
+                height: 556px;
+                background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp),
+                        url(../images/desktop/main/pointshero-desktop@1x.webp);
+                    background-position: top 72px left 610px, left 0px bottom 0px;
+                
+                    @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                        background-image: url(../images/desktop/main/icecreamhero-desktop@2x.webp),
+                            url(../images/desktop/main/pointshero-desktop@2x.webp);
+                    }
+                
+                    @media screen and (min-device-pixel-ratio: 3),
+                    screen and (min-resolution: 288dpi),
+                    screen and (min-resolution: 3dppx) {
+                        background-image: url(../images/desktop/main/icecreamhero-desktop@3x.webp),
+                            url(../images/desktop/main/pointshero-desktop@3x.webp);
+                    }
             }
                         
     }
@@ -55,6 +104,11 @@
 
         border: 2px solid getColor('main-yellow');
         border-radius: 8px;
+
+        @media screen and (min-width: 1200px) {
+                padding: 12px 34px;
+                border-radius: 10px;
+            }
     }
 
     &__about {

@@ -56,16 +56,16 @@
             <nav>
                 <ul class="nav-site">
                     <li class="nav-site_item">
-                        <a href="#" class="nav-site__link link">Home</a>
+                        <a href="#hero" class="nav-site__link link">Home</a>
                     </li>
                     <li class="nav-site_item">
                         <a href="#" class="nav-site__link link">How it’s made?</a>
                     </li>
                     <li class="nav-site_item">
-                        <a href="#" class="nav-site__link link">Our products</a>
+                        <a href="#products" class="nav-site__link link">Our products</a>
                     </li>
                     <li class="nav-site_item">
-                        <a href="#" class="nav-site__link link">Contact</a>
+                        <a href="#contacts" class="nav-site__link link">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="menu-container js-menu-container" id="toggle-menu">
-            <button type="button" class="toggle-button js-close-menu">
+            <button type="button" class="toggle-button toggle-button--close js-close-menu">
                 <svg width="32" height="32" aria-label="toggle menu">
                     <use
                     class="icon-menu"
@@ -85,20 +85,26 @@
                 </svg>
             </button>
 
-            <ul class="toggle-menu ">
-                <li class="toggle-menu_item">
-                    <a href="./index.html" class="toggle-menu__link">Home</a>
+            <ul class="toggle-menu list">
+                <li class="toggle-menu__item">
+                    <a href="./index.html" class="toggle-menu__link link">Home</a>
                 </li>
-                <li class="toggle-menu_item">
-                    <a href="#" class="toggle-menu__link">How it’s made?</a>
+                <li class="toggle-menu__item">
+                    <a href="#" class="toggle-menu__link link">How it’s made?</a>
                 </li>
-                <li class="toggle-menu_item">
-                    <a href="#" class="toggle-menu__link">Our products</a>
+                <li class="toggle-menu__item">
+                    <a href="#" class="toggle-menu__link link">Our products</a>
                 </li>
-                <li class="toggle-menu_item">
-                    <a href="#" class="toggle-menu__link">Contact</a>
+                <li class="toggle-menu__item">
+                    <a href="#" class="toggle-menu__link link">Contact</a>
                 </li>
+                
             </ul>
+
+            <div class="button-position">
+                <button type="button" class="button toggle-menu-button">Buy now</button>
+            </div>
+
         </div>
     </div>
 </header>

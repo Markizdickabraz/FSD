@@ -22,7 +22,8 @@ $main-transition-time: 250ms;
     font-weight: 600;
     font-size: 14px;
     line-height: calc(18 / 14);
-    color: #000000;
+
+    color: getColor('main-text-black');
   
     padding-top: 12px;
     padding-bottom: 12px;
@@ -36,7 +37,7 @@ $main-transition-time: 250ms;
       background-color $main-transition-time $cubic-bezier;
   
     &:focus {
-      color: #FCFCFC;
+      color: getColor('modalback-and-textcolor-white');
     }
   }
   
@@ -45,15 +46,15 @@ $main-transition-time: 250ms;
   
     border: none;
   
-    background-color: #f8d24e;
+    background-color: getColor('main-yellow');
     
     &:hover,
     &:focus {
-      background-color: #0A8817;
+      background-color: getColor('bright-green-btn');
     }
   
     &:disabled {
-      background-color: #ABABAB;
+      background-color: getColor('text-grey');
     }
   }
   
@@ -62,15 +63,15 @@ $main-transition-time: 250ms;
   
     background-color: transparent;
   
-    border: 2px solid #f8d24e;
+    border: 2px solid getColor('main-yellow');
     
     &:hover,
     &:focus {
-      border-color: #0A8817;
+      border-color: getColor('bright-green-btn');
     }
   
     &:disabled {
-      border-color: #ABABAB;
+      border-color: getColor('text-grey');
     }
   }
   

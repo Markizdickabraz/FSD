@@ -1,4 +1,3 @@
-
 //   Змінні для переходів та анімацій:
 // кубік бізаір
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
@@ -7,7 +6,7 @@ $main-transition-time: 250ms;
 
 //   Міксини для стилізації кнопок:
 // button() - для звичайної кнопки з суцільною заливкою
-// button--transparent() - для прозорої кнопки 
+// button--transparent() - для прозорої кнопки
 // якщо кнопка зменшується на мобілках та планшетах, то ДОДАТКОВО додаємо міксин
 // button--adaptive()
 // якщо кнопка містить стрілочку, то ДОДАТКОВО додаємо міксин
@@ -16,119 +15,118 @@ $main-transition-time: 250ms;
 // $space-after-arrow - відступ від стрілки до краю кнопки (правий паддінг)
 
 @mixin button-base() {
-    cursor: pointer;
+  cursor: pointer;
 
-    @include base-fonts();
-    @include btn-fonts();
-  
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 34px;
-    padding-right: 34px;
-  
-    border-radius: 10px;
+  @include base-fonts();
+  @include btn-fonts();
 
-    transition: color $main-transition-time $cubic-bezier, 
-      background-color $main-transition-time $cubic-bezier, 
-      background-color $main-transition-time $cubic-bezier;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 34px;
+  padding-right: 34px;
 
-    color: getColor('main-text-black');
-    &:focus {
-        color: getColor('modalback-and-textcolor-white');
-    }
+  border-radius: 10px;
+
+  transition: color $main-transition-time $cubic-bezier,
+    background-color $main-transition-time $cubic-bezier,
+    background-color $main-transition-time $cubic-bezier;
+
+  color: getColor('main-text-black');
+  &:focus {
+    color: getColor('modalback-and-textcolor-white');
   }
-  
-  @mixin button() {
-    @include button-base();
-  
-    border: none;
-  
-    background-color: getColor('main-yellow');
-    
-    &:hover,
-    &:focus {
-      background-color: getColor('bright-green-btn');
-    }
-  
-    &:disabled {
-      background-color: getColor('text-grey');
-    }
+}
+
+@mixin button() {
+  @include button-base();
+
+  border: none;
+
+  background-color: getColor('main-yellow');
+
+  &:hover,
+  &:focus {
+    background-color: getColor('bright-green-btn');
   }
-  
-  @mixin button--transparent() {
-    @include button-base();
-  
-    background-color: transparent;
-  
-    border: 2px solid getColor('main-yellow');
-    
-    &:hover,
-    &:focus {
-      border-color: getColor('bright-green-btn');
-    }
-  
-    &:disabled {
-      border-color: getColor('text-grey');
-    }
+
+  &:disabled {
+    background-color: getColor('text-grey');
   }
-  
-  @mixin button--adaptive() {
-    @media screen and (max-width: 1199px) {
-      font-size: 8px;
-      line-height: calc(10 / 8);
-  
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 10px;
-      padding-right: 10px;
-  
-      border-radius: 8px;
-    }
+}
+
+@mixin button--transparent() {
+  @include button-base();
+
+  background-color: transparent;
+
+  border: 2px solid getColor('main-yellow');
+
+  &:hover,
+  &:focus {
+    border-color: getColor('bright-green-btn');
   }
-  
-  @mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
-    position: relative;
-    padding-right: 5px + $space-before-arrow + $space-after-arrow;
-  
-    &::after {
-      content: '';
-      display: block;
-  
-      fill: currentColor;
-  
-      background-image: url('../images/sprite.svg#button-arrow');
-      background-repeat: no-repeat;
-      background-size: contain;
-  
-      height: 8px;
-      width: 5px;
-      position: absolute;
-      top: calc(50% - 4px);
-      right: 0px + $space-after-arrow;
-    }
+
+  &:disabled {
+    border-color: getColor('text-grey');
   }
-  
+}
+
+@mixin button--adaptive() {
+  @media screen and (max-width: 1199px) {
+    font-size: 8px;
+    line-height: calc(10 / 8);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 8px;
+  }
+}
+
+@mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
+  position: relative;
+  padding-right: 5px + $space-before-arrow + $space-after-arrow;
+
+  &::after {
+    content: '';
+    display: block;
+
+    fill: currentColor;
+
+    background-image: url('../images/sprite.svg#button-arrow');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 8px;
+    width: 5px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 0px + $space-after-arrow;
+  }
+}
 
 $colors: (
-'main-background-color': #84A178,
-'main-yellow': #F8D24E,
-'main-text-black': #131313,
-'modalback-and-textcolor-white': #FCFCFC,
+  'main-background-color': #84a178,
+  'main-yellow': #f8d24e,
+  'main-text-black': #131313,
+  'modalback-and-textcolor-white': #fcfcfc,
 
-'product-ingredients-green': #AEC6A5,
-'product-background-yellow': #EFD478,
-'product-text-babyshit': #D6936D,
-'bright-green-btn': #0A8817,
+  'product-ingredients-green': #aec6a5,
+  'product-background-yellow': #efd478,
+  'product-text-babyshit': #d6936d,
+  'bright-green-btn': #0a8817,
 
-'personal-info-background': rgba(248, 210, 78, 0.1),
-'text-grey': #ABABAB,
-'all-rights-text': #7A7A7A,
+  'personal-info-background': rgba(248, 210, 78, 0.1),
+  'text-grey': #ababab,
+  'all-rights-text': #7a7a7a,
 );
 
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
 @function getColor($key) {
-    @return map-get($colors, $key);
+  @return map-get($colors, $key);
 }
 
 /*fonts*/
@@ -136,423 +134,409 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 /*body base fonts*/
 
 @mixin base-fonts {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    line-height: 1.22;
-    font-size: 14px;
-    letter-spacing: 0.04em;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  line-height: 1.22;
+  font-size: 14px;
+  letter-spacing: 0.04em;
 }
 
 @mixin section_title-fonts {
-    font-family: 'Seymour One';
-    font-size: 30px;
-    text-transform: uppercase;
+  font-family: 'Seymour One';
+  font-size: 30px;
+  text-transform: uppercase;
 
-    @media screen and (min-width:768px) {
-        font-size: 34px;
-        letter-spacing: 0.06em;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+    letter-spacing: 0.06em;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 36px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }
 
 @mixin section_label-fonts {
-    font-weight: 800;
-    font-size: 18px;
-    text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
 
-    @media screen and (min-width:768px) {
-        font-size: 22px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 30px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 }
 
 /*кнопки*/
 
 @mixin btn-fonts {
-    font-weight: 600;
+  font-weight: 600;
 }
-
 
 /*nav-menu fonts*/
 
 @mixin nav-fonts {
-    font-weight: 700;
-    font-size: 32px;
+  font-weight: 700;
+  font-size: 32px;
 
-    @media screen and (min-width:768px) {
-        font-size: 48px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
-
 
 /*hero fonts*/
 
 /*заголовок*/
 @mixin hero_title-fonts {
-    font-family: 'Seymour One';
-    font-size: 26px;
-    text-transform: uppercase;
+  font-family: 'Seymour One';
+  font-size: 26px;
+  text-transform: uppercase;
 
-    @media screen and (min-width:768px) {
-        font-size: 18px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 38px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 38px;
+  }
 }
 
 /*якірні посилання*/
 @mixin anchors_link-fonts {
-    font-weight: 600;
-    font-size: 8px;
+  font-weight: 600;
+  font-size: 8px;
 
-    @media screen and (min-width:1200px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 /*кількість кафе і вагончиків*/
 
 @mixin number_hero-fonts {
-    @media screen and (min-width:768px) {
-        font-weight: 900;
-        font-size: 28px;
-        text-transform: uppercase;
-    }
+  @media screen and (min-width: 768px) {
+    font-weight: 900;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 46px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 46px;
+  }
 }
 
 @mixin cafes_trucks-fonts {
-    @media screen and (min-width:768px) {
-        font-size: 8px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 8px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
-
 
 /*lorem in hero*/
 @mixin hero_text-fonts {
-    @media screen and (min-width:768px) {
-        font-size: 12px;
-        line-height: 1.42;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.42;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
-
 
 /*section products*/
 
-
 @mixin products_title-fonts {
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
 
-    @media screen and (min-width:768px) {
-        font-size: 22px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 30px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 }
 
 @mixin products_item-fonts {
-    line-height: 1.75;
+  line-height: 1.75;
 
-    @media screen and (min-width:1200px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 /*section about*/
 
 @mixin about_text-fonts {
-    font-size: 12px;
-    line-height: 1.75;
+  font-size: 12px;
+  line-height: 1.75;
 
-    @media screen and (min-width:1200px) {
-        font-size: 16px;
-    }
-
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 /*section advantages*/
 
 @mixin advan_number-fonts {
-    font-weight: 700;
-    font-size: 36px;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
 
-    @media screen and (min-width:768px) {
-        font-size: 48px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 58px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+  }
 }
 
 @mixin advan_text-fonts {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.75;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.75;
+  text-transform: uppercase;
 
-    @media screen and (min-width:768px) {
-        font-weight: 400;
-        font-size: 14px;
-    }
+  @media screen and (min-width: 768px) {
+    font-weight: 400;
+    font-size: 14px;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 16px;
-        letter-spacing: 0.02em;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
 }
 
 /*section customer reviews*/
 
-
 @mixin reviews-fonts {
-    font-size: 12px;
-    line-height: 2.58;
+  font-size: 12px;
+  line-height: 2.58;
 
-    @media screen and (min-width:768px) {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.86;
-    }
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+  }
 
-    @media screen and (min-width:1200px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 @mixin customer-fonts {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.86;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.86;
 
-    @media screen and (min-width:768px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 /*section contacts*/
 
-
 @mixin contacts_title-fonts {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
 
-    @media screen and (min-width:768px) {
-        font-size: 16px;
-    }
-
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 @mixin contacts_item-fonts {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
 
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 
-    @media screen and (min-width:768px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 @mixin contacts_link-fonts {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
 
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-        line-height: 1.86;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
 
-    @media screen and (min-width:768px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 /*footer*/
 
 @mixin footer_title-fonts {
-    font-weight: 700;
-    font-size: 34px;
+  font-weight: 700;
+  font-size: 34px;
 
-    @media screen and (min-width:768px) {
-        font-size: 48px;
-        letter-spacing: 0.06em;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    letter-spacing: 0.06em;
+  }
 
-    @media screen and (min-width:768px) {
-        font-size: 58px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 58px;
+  }
 }
 
 @mixin footer_label-fonts {
-    font-weight: 700;
-    font-size: 18px;
+  font-weight: 700;
+  font-size: 18px;
 
-    @media screen and (min-width:768px) {
-        font-size: 26px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
 
-    @media screen and (min-width:768px) {
-        font-size: 30px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 @mixin footer_contacts-fonts {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.86;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
 
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 
-    @media screen and (min-width:768px) {
-        font-size: 16px;
-        letter-spacing: 0.02em;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
 }
 
 @mixin footer_end-fonts {
-    font-weight: 700;
-    line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.5;
 
-    @media screen and (min-width:768px) {
-        line-height: 1.86;
-        letter-spacing: 0.02em;
-    }
+  @media screen and (min-width: 768px) {
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
 
-    @media screen and (min-width:768px) {
-        font-size: 12px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 /*modal windows*/
 
 @mixin btn_modal-fonts {
-    font-weight: 600;
-    font-size: 12px;
+  font-weight: 600;
+  font-size: 12px;
 
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 @mixin modal_title-fonts {
-    font-family: 'Seymour One';
-    font-size: 16px;
-    line-height: 1.4;
+  font-family: 'Seymour One';
+  font-size: 16px;
+  line-height: 1.4;
 
-    @media screen and (min-width:768px) {
-        font-size: 20px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 @mixin modal_form-fonts {
-    font-size: 12px;
-    line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.4;
 
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 @mixin modal_text-fonts {
-    line-height: 1.4;
+  line-height: 1.4;
 
-    @media screen and (min-width:768px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 /* Modal Buy now*/
 
 @mixin bnproduct_title-fonts {
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
 }
-
 
 /* Modal ingredients відрізняється від інших модалок*/
 
-
 @mixin modaling_title-fonts {
-    font-family: 'Seymour One';
-    font-size: 20px;
-    line-height: 1.4;
+  font-family: 'Seymour One';
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 @mixin organic_weight-fonts {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 2.8;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
 
-    @media screen and (min-width:768px) {
-        font-size: 12px;
-        line-height: 2.3;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 2.3;
+  }
 }
 
 @mixin organic_title-fonts {
-    font-size: 10px;
+  font-size: 10px;
 
-    @media screen and (min-width:768px) {
-        font-size: 12px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 }
 
-
 @mixin modaling_titleing-fonts {
-    font-size: 20px;
-    line-height: 1.4;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 @mixin ingredient_item-fonts {
-    font-size: 14px;
-    line-height: 1.75;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 @mixin modaling_form-fonts {
-    font-size: 14px;
-    line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 @mixin btn_modaling-fonts {
-    font-weight: 600;
-    font-size: 14px;
+  font-weight: 600;
+  font-size: 14px;
 }
-
-

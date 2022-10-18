@@ -1,0 +1,97 @@
+.customers {
+    padding-top: 80px;
+    padding-bottom: 48px;
+    background-color: #fff;
+    background-image: url('../images/mobile/main/background1@1x.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/mobile/main/background1@2x.jpg');
+    }
+
+
+    @media screen and (min-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        background-image: url('../images/desktop/backgrounds/background1@1x.jpg');
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 128px;
+        padding-bottom: 100px;
+        background-image: url('../images/desktop/backgrounds/background1@2x.jpg');
+    }
+}
+
+.swiper-wrapper list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.customer-reviews__image {
+    border-radius: 50%;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 28px;
+    }
+
+}
+
+.swiper-slide customer-reviews__item {
+    width: 100%;
+    background-color: var(--modalback-and-textcolor-white);
+    border-radius: 10px;
+    padding: 34px 29px;
+    margin-bottom: 30px;
+
+
+    @media screen and (min-width: 768px) {
+        border-radius: 24px;
+        padding: 28px 80px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 968px;
+        padding: 39px 74px;
+    }
+}
+
+.customer-reviews__feedback {
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.86;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 1.86;
+    }
+}
+
+
+
+.customer-reviews__location {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.86;
+    text-align: center;
+    color: var(--main-text-black);
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+
+}

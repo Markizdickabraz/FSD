@@ -108,6 +108,39 @@ $main-transition-time: 250ms;
     }
   }
   
+//   @mixin modal-close-button() {
+//     position: relative;
+//     width: 16px;
+//     height: 16px;
+
+//     @media screen and (min-width: 768px) {
+//         width: 20px;
+//         height: 20px;
+//     }
+
+//     &::after {
+//         content: '';
+//         display: block;
+
+//         background-image: url('../images/sprite.svg#close_black');
+//         background-repeat: no-repeat;
+//         background-size: contain;
+
+//         width: 12px;
+//         height: 12px;
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+
+//         transform: translate(-50%, -50%);
+
+//         @media screen and (min-width: 768px) {
+//             width: 10px;
+//             height: 10px;
+//         }
+//     }
+// }
+
 
 $colors: (
 'main-background-color': #84A178,
@@ -494,6 +527,15 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width:768px) {
         font-size: 16px;
+    }
+}
+
+@mixin modal_placeholder-fonts {
+    font-size: 12px;
+    line-height: 1.40;
+
+     @media screen and (min-width: 768px) {
+        font-size: 14px;
     }
 }
 

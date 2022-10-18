@@ -1,29 +1,153 @@
 // Franchising modal
 
 .franchise__button {
-    
+    @include button();
 }
+
 .backdrop {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+  
+    background: rgba(0, 0, 0, 0.2);
 }
-.is-hidden {
-}
+
 .franchise-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 280px;
+ 
+    background-color: getColor('modalback-and-textcolor-white');
+    border: 2px solid getColor('main-yellow');
+    border-radius: 10px;
+
+    transform: translate(-50%, -50%);
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+
+    @media screen and (min-width: 768px) {
+        width: 568px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
-.franchise-modal__form {
-}
+
+// .franchise-modal__form {
+// }
+
 .franchise-modal__head {
+    @include modal_title-fonts;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        width: 322px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
 }
+
 .franchise-modal__text {
+    @include modal_text-fonts;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
 }
+
 .franchise-modal__group {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
 }
+
+.franchise-modal__group input {
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }
+}
+
 .franchise-modal__item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.franchise-modal__input {
-}
+
+.franchise-modal__input,
 .franchise-modal__message {
+    @include modal_form-fonts;
+
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &::placeholder {
+        @include modal_placeholder-fonts;
+        color: getColor('main-text-black');
+
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    }
 }
+
+// .franchise-modal__message {
+// }
+
 .franchise-modalsubmit__btn {
+    @include button();
+    @include btn_modal-fonts;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .franchise-modalclose__btn {
+    position: relative;
+    width: 16px;
+    height: 16px;
+
+    @media screen and (min-width: 768px) {
+        width: 20px;
+        height: 20px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+
+        background-image: url('../images/sprite.svg#close_black');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        @media screen and (min-width: 768px) {
+            width: 10px;
+            height: 10px;
+        }
+    }
 }

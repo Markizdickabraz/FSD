@@ -1,57 +1,38 @@
 <header class="header">
     <div class="container nav-container">
         <div class="nav-position">
-        <a href="./index.html" class="logo">
-            <picture>
-                <source
-                  srcset="
+            <a href="./index.html" class="logo">
+                <picture>
+                    <source srcset="
                   ./images/logo_png/logo-mob@1x.png    1x,
                   ./images/logo_png/logo-mob@2x.png    2x,
                   ./images/logo_png/logo-mob@3x.png    3x
-                  "
-                  media="(max-width: 767px)"
-                />
+                  " media="(max-width: 767px)" />
 
-                <source
-                srcset="
+                    <source srcset="
                 ./images/logo_png/logo@1x.png    1x,
                 ./images/logo_png/logo@2x.png    2x,
                 ./images/logo_png/logo@3x.png    3x
-                "
-                media="(min-width: 1200px)"
-                />
+                " media="(min-width: 1200px)" />
 
-                <source
-                srcset="
+                    <source srcset="
                 ./images/logo_png/logo-tab@1x.png    1x,
                 ./images/logo_png/logo-tab@2x.png    2x,
                 ./images/logo_png/logo-tab@3x.png    3x
-                "
-                media="(min-width: 768px)"
-                />
+                " media="(min-width: 768px)" />
 
-                <img
-                  src="./images/logo_png/logo@1x.png"
-                  alt="ice-cream logo"
-                />
-		     </picture>
-        </a>
+                    <img src="./images/logo_png/logo@1x.png" alt="ice-cream logo" />
+                </picture>
+            </a>
         </div>
 
-        <button
-            type="button"
-            class="toggle-button js-open-menu"
-            aria-expanded="false"
-            aria-controls="toggle-menu"
-        >
+        <button type="button" class="nav__button menu-toggle js-open-menu" aria-expanded="false"
+            aria-controls="mobile-menu">
             <svg width="32" height="32" aria-label="toggle menu">
-                <use
-                    class="icon-menu"
-                    href="./images/sprite.svg#burger"
-                ></use>
+                <use class="icon-menu" href="./images/sprite.svg#burger"></use>
             </svg>
         </button>
-  
+
         <div class="menu">
             <nav>
                 <ul class="nav-site">
@@ -72,16 +53,13 @@
         </div>
 
         <div class="nav-position">
-        <button type="button" class="button header-button">Buy now</button>
+            <button type="button" class="button header-button">Buy now</button>
         </div>
 
         <div class="menu-container js-menu-container" id="toggle-menu">
-            <button type="button" class="toggle-button toggle-button--close js-close-menu">
+            <button type="button" class="toggle-button close-modal__btn js-close-menu">
                 <svg width="32" height="32" aria-label="toggle menu">
-                    <use
-                    class="icon-menu"
-                    href="./images/sprite.svg#close_white"
-                    ></use>
+                    <use class="icon-menu" href="./images/sprite.svg#close_white"></use>
                 </svg>
             </button>
 
@@ -98,7 +76,7 @@
                 <li class="toggle-menu__item">
                     <a href="#" class="toggle-menu__link link">Contact</a>
                 </li>
-                
+
             </ul>
 
             <div class="button-position">

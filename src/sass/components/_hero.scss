@@ -3,6 +3,7 @@
 
     &__container {
         height: 392px;
+        padding-top: 16px;
         position: relative;
         background-size: contain;
         background-repeat: no-repeat;
@@ -50,11 +51,11 @@
         
             @media screen and (min-width: 1200px) {
                 height: 556px;
-                background-size: 610px 770px, contain,  225px 225px;
+                background-size: 600px 740px, contain,  225px 225px;
                 background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp),
                         url(../images/desktop/main/pointshero-desktop@1x.webp),
                         url(../images/desktop/main/galleryhero-desktop@1x.webp);
-                    background-position: top -115px left 580px, left 0px bottom 0px, bottom 65px left 17px;
+                    background-position: top -80px left 580px, left 0px bottom 0px, bottom 65px left 17px;
                 
                     @media screen and (min-device-pixel-ratio: 2),
                     screen and (min-resolution: 192dpi),
@@ -194,7 +195,7 @@
             flex-direction: column;
             gap: 20px;
             position: absolute;
-            top: 0;
+            top: 16px;
             right: 0;
         }
 

@@ -1,0 +1,129 @@
+.advantages {
+  background-color: getColor('main-background-color');
+  padding-top: 42px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 180px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 204px;
+  }
+}
+
+.advantages__thumb {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+
+  background-color: getColor('main-yellow');
+  border-radius: 100%;
+  border: none;
+
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__img {
+  position: absolute;
+  top: 7px;
+}
+
+.advantages__title {
+  margin-bottom: 18px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: getColor('modalback-and-textcolor-white');
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+
+    font-size: 48px;
+    line-height: calc(59 / 48);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 16px;
+
+    font-size: 48px;
+    line-height: calc(71 / 58);
+  }
+}
+
+.advantages__desc {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 170%;
+  color: getColor('modalback-and-textcolor-white');
+  padding-bottom: 25px;
+
+  margin: 0 auto;
+  width: 230px;
+
+  @media screen and (min-width: 768px) {
+    width: 150px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 174%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 176%;
+    letter-spacing: 0.02em;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    gap: 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 80px * 2) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 30px * 2) / 3);
+  }
+}

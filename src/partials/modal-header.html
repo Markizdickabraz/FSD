@@ -1,65 +1,65 @@
-<div class="backdrop is-hidden" data-modal>
-    <div class="modal">
-        <button class="close-modal" data-modal-close>
-            <svg class="close-modal-svg" width="20px" height="20px">
-            <use href="#"></use>
-            </svg>
-        </button>
+<div class="backdrop visually-hidden">
+  <div class="modal ">
+    <button class="close-modal">
+      <svg class="close-modal-svg" width="20px" height="20px">
+        <use href="./images/sprite.svg#close_black"></use>
+      </svg>
+    </button>
 
         <form class="form-header">
-            <b class="form__name"
+            <b class="form-header__name"
             >Buy now</b
         >
 
-	<div role="group">
+    <div role="group" class="checkbox-group">
 
-    <div class="checkbox checkbox-first">
-    <label class="kind">
-		<input type="checkbox" class="kind-icecream">
-    <span class="checkbox--green"></span>
-      <span class="checkbox-text">ice cream</span>
-    </label>
-  </div>
+      <div class="checkbox checkbox-first">
+      <label class="kind">
+      <input type="checkbox" class="kind-icecream">
+      <span class="checkbox--green"></span>
+        <span class="checkbox-text">ice cream</span>
+      </label>
+      </div>
 
-    <div class="checkbox">
-    <label class="kind">
-		<input type="checkbox" class="kind-icecream">
-    <span class="checkbox--yellow"></span>
-    <span class="checkbox-text">ice coffee</span>
-    </label>
+      <div class="checkbox checkbox-second">
+      <label class="kind">
+      <input type="checkbox" class="kind-icecream">
+      <span class="checkbox--yellow"></span>
+      <span class="checkbox-text">ice coffee</span>
+      </label>
+      </div>
+
+      <div class="checkbox checkbox-third">
+      <label class="kind">
+      <input type="checkbox" class="kind-icecream">
+      <span class="checkbox--orange"></span>
+      <span class="checkbox-text">milkshake</span>
+      </label>
+      </div>
     </div>
 
-    <div class="checkbox">
-		<label class="kind">
-    <input type="checkbox" class="kind-icecream">
-    <span class="checkbox--orange"></span>
-    <span class="checkbox-text">milkshake</span>
-    </label>
-    </div>
-
-    <div class="form-header">
-        <label class="form-header__field">
-            <input type="text" name="name" placeholder="Name" class="form-header__input" />
+    <div class="form-fields">
+        <label class="form-fields__field">
+            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Z]+$" maxlength="30" class="form-fields__input" title="Username should only contain letters." required/>
         </label>
 
-        <label class="form-header__field">
-            <input type="tel" name="tel" placeholder="Phone" class="form-header__input" />
+        <label class="form-fields__field">
+            <input type="tel" name="tel" placeholder="Phone" pattern="^[a-zA-Z0-9]+$" maxlength="12" class="form-fields__input" title="Phone should only contain numbers." required/>
         </label>
 
-        <label class="form-header__field"
-        >Comments
+        <label class="form-fields__field">
         <textarea
           name="comment"
           cols="30"
           rows="10"
           placeholder="Comment"
-          class="form-header__comment"
+          class="form-fields__comment"
         ></textarea>
       </label>
     </div>
 
     <div class="header-submit">
-      <button type="submit" class="button-form button">Submit</button>
+      <button type="submit" class="button-form">Submit</button>
     </div>
     </form>
   </div>

@@ -70,6 +70,62 @@ $main-transition-time: 250ms;
     border-color: getColor('text-grey');
   }
 }
+  
+  @mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
+    position: relative;
+    padding-right: 5px + $space-before-arrow + $space-after-arrow;
+  
+    &::after {
+      content: '';
+      display: block;
+
+      background-color: getColor('main-text-black');
+      mask-image: url('../images/sprite.svg#button-arrow');
+  
+      height: 8px;
+      width: 5px;
+      position: absolute;
+      top: calc(50% - 4px);
+      right: 0px + $space-after-arrow;
+    }
+
+    &:focus::after {
+        background-color: getColor('modalback-and-textcolor-white');
+    }
+  }
+
+  @mixin modal-close() {
+    position: relative;
+    width: 16px;
+    height: 16px;
+
+    @media screen and (min-width: 768px) {
+        width: 20px;
+        height: 20px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+
+        background-image: url('../images/sprite.svg#close_black');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        @media screen and (min-width: 768px) {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
 
 @mixin button--adaptive() {
   @media screen and (max-width: 1199px) {
@@ -82,28 +138,6 @@ $main-transition-time: 250ms;
     padding-right: 10px;
 
     border-radius: 8px;
-  }
-}
-
-@mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
-  position: relative;
-  padding-right: 5px + $space-before-arrow + $space-after-arrow;
-
-  &::after {
-    content: '';
-    display: block;
-
-    fill: currentColor;
-
-    background-image: url('../images/sprite.svg#button-arrow');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 8px;
-    width: 5px;
-    position: absolute;
-    top: calc(50% - 4px);
-    right: 0px + $space-after-arrow;
   }
 }
 
@@ -484,6 +518,15 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
+}
+
+@mixin modal_placeholder-fonts {
+    font-size: 12px;
+    line-height: 1.40;
+
+     @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 /* Modal Buy now*/

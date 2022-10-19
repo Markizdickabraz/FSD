@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="visually-hidden">Contact center</h2>
     <ul class="contact_item">
-      <li class="contacts_list">
+      <li class="contacts__list">
         <div class="tabel">CAFE</div>
         <div class="tabel_item">
           <div class="tabel_list">
@@ -24,7 +24,7 @@
         </div>
       </li>
 
-      <li class="contacts_list">
+      <li class="contacts__list">
         <div class="tabel tabel--green">FOODTRUCK</div>
         <div class="tabel_item">
           <div class="tabel_list">
@@ -46,7 +46,7 @@
         </div>
       </li>
 
-      <li class="contacts_list">
+      <li class="contacts__list">
         <div class="tabel">CAFE</div>
         <div class="tabel_item">
           <div class="tabel_list">
@@ -69,9 +69,15 @@
     <div class="drawing">
       <button class="drawing_btn drawing_btn--left js-open-modal" data-modal="location" type="button">
         Our Locations
+        <svg class="contacts__icon" width="12px" height="12px">
+          <use href="./images/sprite.svg#button-arrow"></use>
+        </svg>
       </button>
       <button class="drawing_btn drawing_btn--right js-open-modal" data-modal="franchise" type="button">
         Franchise
+        <svg class="contacts__icon" width="12px" height="12px">
+          <use href="./images/sprite.svg#button-arrow"></use>
+        </svg>
       </button>
     </div>
   </div>

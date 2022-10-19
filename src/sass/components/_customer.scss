@@ -61,6 +61,15 @@
 .customer-reviews__feedback {
     @include reviews-fonts;
     text-align: center;
+    color: getColor('modalback-and-textcolor-white')}
+
+.customer-reviews__wrapper{
+    background-color: getColor('main-background-color');
+    width: 968px;
+    height: 138px;
+    border-radius: 24px
+}
+
 
     // font-size: 12px;
     // line-height: 2.55;
@@ -75,7 +84,7 @@
     //     font-size: 16px;
     //     line-height: 1.86;
     // }
-}
+
 
 
 

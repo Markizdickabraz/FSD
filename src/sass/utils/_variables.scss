@@ -80,7 +80,7 @@ $main-transition-time: 250ms;
       display: block;
 
       background-color: getColor('main-text-black');
-      mask-image: url('../images/sprite.svg#button-arrow');
+      mask-image: url('../images/arrow.svg');
   
       height: 8px;
       width: 5px;
@@ -108,7 +108,7 @@ $main-transition-time: 250ms;
         content: '';
         display: block;
 
-        background-image: url('../images/sprite.svg#close_black');
+        background-image: url('../images/close.svg');
         background-repeat: no-repeat;
         background-size: contain;
 
@@ -582,4 +582,14 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 @mixin btn_modaling-fonts {
   font-weight: 600;
   font-size: 14px;
+}
+
+// new exp code
+.butexp {
+  @include button();
+  @include arrow-for-button(20px, 50px);
+}
+
+.butexp2 {
+  @include modal-close();
 }

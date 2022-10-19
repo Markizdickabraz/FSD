@@ -589,7 +589,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 // new exp code
 .butexp {
   @include button();
-  @include arrow-for-button(20px, 50px);
+  @include arrow-for-button(50px, 20px);
 }
 
 .butexp2 {

@@ -1,3 +1,108 @@
+// Location modal
+.location-modal {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: $cubic-bezier $main-transition-time;    
+    padding: 40px;
+    border-radius: 10px;
+    background-color: getColor('modalback-and-textcolor-white');
+    max-width: 280px;
+    @media screen and (min-width: 768px) {
+      max-width: 568px;  
+    }
+}
+
+.location-close__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;    
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--btnlet-color);
+    transition: fill var(--timing-function);
+    cursor: pointer;
+    top: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    padding: 6px;
+    @media screen and (min-width: 768px) {
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+}
+
+.location-close__button:hover,
+.location-close__button {
+    fill: getColor('bright-green-btn');
+}
+
+.location-modal__map {
+    padding: 0;
+    background-color: getColor('modalback-and-textcolor-white');
+}
+
+.location-modal__frame {
+    max-width: 224px;
+    height: 199px;
+    @media screen and (min-width: 768px){
+        max-width: 448px;
+        height: 260px;
+    }
+}
+
+.location-modal__head {
+    @include modal_title-fonts();
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor('#131313;');
+    margin-bottom: 25px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.location-modal__btn {
+    @include button();
+    // display: block;
+    // width: 132px;
+    // height: 42px;
+    // font-weight: 700;
+    // font-size: 16px;
+    // line-height: calc(30/16);
+    // background-color: var(--btnbg-color);
+    // text-align: center;
+    // border: none;
+    // border-radius: 4px;
+    // margin: 0 auto;
+    // margin-top: 20px;
+    // cursor: pointer;
+    // font-family: 'Montserrat';
+    //     font-style: normal;
+    //     font-weight: 600;
+    //     font-size: 12px;
+    //     line-height: 15px;
+    //     display: flex;
+    //     align-items: center;
+    //     text-align: center;
+    //     color: #131313;
+}
+
+// .location-modal__btn:hover {
+//     background-color: green;
+// }
+
+// .location-modal__btn:focus {
+//     background-color: green;
+//     color: #FCFCFC;
+// }
 // STYLES MODAL PRODUCTS
 
 /* .backdrop.is-hidden {

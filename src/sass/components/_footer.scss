@@ -15,6 +15,8 @@
 }
 
 .footer__text {
+    text-transform: uppercase;
+    text-align: start;
     @media screen and (max-width: 767px) {
         display: flex;
         flex-direction: column;
@@ -59,12 +61,12 @@
 }
 
 .footer__big {
+    
     @media screen and (max-width:767px) {
         font-size: 34px;
         line-height: calc(41/34);
         letter-spacing: 0.04em;
-        margin-bottom: 42.01px;
-        text-align: start;
+        margin-bottom: 42.01px;     
     }
 
     @media screen and (min-width:768px) {
@@ -80,7 +82,7 @@
         font-size: 58px;
         line-height: calc(71/58);
         letter-spacing: 0.06em;
-        text-transform: uppercase;
+        
     }
 
 }

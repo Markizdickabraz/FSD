@@ -105,11 +105,27 @@
 // }
 // STYLES MODAL PRODUCTS
 
-/* .backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-} */
+
+// .backdrop {
+//   display: block;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.2);
+//   visibility: visible;
+//   opacity: 1;
+//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//     overflow: scroll;
+// }
+
+// .backdrop.is-hidden {
+// opacity: 0;
+//  pointer-events: none;
+// visibility: hidden;
+// } 
 
 /* Оформление формы */
 
@@ -119,13 +135,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 568px;
-  height: 995px;
-  background: #fcfcfc;
+  width: 280px;
+  background: getColor('modalback-and-textcolor-white');
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border: 2px solid #f8d24e;
+  border: 2px solid getColor('main-yellow');
   border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+  }
 }
 .icecream-title {
   font-family: 'Seymour One';
@@ -133,7 +152,7 @@
   line-height: calc(28 / 20);
   align-items: center;
   text-align: center;
-  color: #131313;
+  color: getColor('main-text-black');
   margin-bottom: 186px;
 }
 
@@ -155,12 +174,7 @@
   border-radius: 50%;
   width: 132px;
   height: 131px;
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
   top: -155px;
   margin: 0 auto;
@@ -173,24 +187,42 @@
   border-radius: 50%;
   width: 132px;
   height: 131px;
-  background-image: url(../images/mobile/ingredients_modal/icecream_lm_@2x.png);
+  background-image: url(../images/mobile/ingredients_modal/icecream_lm_@1x.png);
   top: -162px;
   margin: 0 auto;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  background-image: url(../images/mobile/ingredients_modal/icecream_lm_@2x.png);
 }
+
+@media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 288dpi),
+  screen and (min-resolution: 3dppx) {
+  background-image: url(../images/mobile/ingredients_modal/icecream_lm_@3x.png);
+}
+}
+
 
 .comound__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 65px;
-  height: 90px;
+  min-width: 53px;
+  height: 72px;
   border: 2px solid #9cbe8f;
   border-radius: 40px;
-  padding: 12px 0px 14px 0px;
+  padding: 12px 0px 8px 0px;
   align-items: center;
   transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $cubic-bezier $main-transition-time;  
+
+  @media screen and (min-width: 768px) {
+    width: 65px;
+    height: 90px;
+    padding-bottom: 14px;
+  }
 }
 
 .comound__item:hover,
@@ -201,20 +233,37 @@
 .comound__item::before {
   position: absolute;
   content: '';
-  width: 53px;
-  height: 53px;
+  width: 43px;
+  height: 43px;
   border-radius: 50%;
   background: #9cbe8f;
   border: 2px solid #9cbe8f;
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
   top: 0;
+
+  @media screen and (min-width: 768px) {
+    width: 53px;
+    height: 53px;
+  }
+}
+
+.comound__item-component.text-long {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.comound__item-component.text-short {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .comound__item-component {
   display: flex;
   font-size: 12px;
   line-height: calc(15 / 12);
-  color: #131313;
+  color: getColor('main-text-black');
   margin-top: auto;
 }
 
@@ -223,7 +272,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: calc(28 / 12);
-  color: #131313;
+  color: getColor('main-text-black');
 }
 
 .ingridient-title {
@@ -233,7 +282,7 @@
   line-height: calc(28 / 20);
   align-items: center;
   text-align: center;
-  color: #131313;
+  color: getColor('main-text-black');
   margin-bottom: 24px;
 }
 
@@ -250,7 +299,7 @@
   font-size: 14px;
   line-height: calc(25 / 14);
   letter-spacing: 0.04em;
-  color: #131313;
+  color: getColor('main-text-black');
 }
 
 .ingridient__item::before {
@@ -271,40 +320,63 @@
 .register-form {
   display: flex;
   text-align: center;
+  justify-content: center;
+}
+
+.register-form__input::placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  color: getColor('main-text-black');
 }
 
 .register-form__input {
-  width: 368px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: getColor('main-text-black');
   height: 42px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid getColor('main-text-black');
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 11px 16px;
   outline: transparent;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $cubic-bezier $main-transition-time;  
+
+  @media screen and (max-width: 767px) {
+    width: 240px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
 }
 
 .register-form__input:hover,
 .register-form__input:focus {
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
 }
-
+.register-form__message::placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  color: getColor('main-text-black');
+}
 .register-form__message {
   resize: none;
-  width: 368px;
+  width: 240px;
   height: 84px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid getColor('main-background-color');
   border-radius: 10px;
   padding: 11px 16px;
   margin-bottom: 32px;
   outline: transparent;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $cubic-bezier $main-transition-time;  
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
 }
 
 .register-form__message:hover,
@@ -317,23 +389,22 @@
   width: 121px;
   height: 42px;
 
-  background-color: #f8d24e;
+  background-color: getColor('main-yellow');
   border-radius: 10px;
   text-align: center;
   border: none;
   margin: 0 auto;
   font-family: inherit;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $cubic-bezier $main-transition-time;  
 }
 
 .register-form__btn:hover {
-  background-color: #0a8817;
+  background-color: getColor('bright-green-btn');
 }
 
 .register-form__btn:focus {
-  background-color: #0a8817;
+  background-color: getColor('bright-green-btn');
   color: #f5f5f5;
   outline: transparent;
 }
@@ -348,16 +419,15 @@
   right: 8px;
   border-radius: 50%;
   background-color: transparent;
-  color: #000000;
+  color: getColor('main-text-black');
   object-fit: contain;
   align-items: center;
   justify-content: center;
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $cubic-bezier $main-transition-time;  
 }
 
 .modal-products__button:hover,
 .modal-products__button:focus {
-  fill: #0a8817;
+  fill: getColor(bright-green-btn);
 }

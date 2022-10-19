@@ -17,7 +17,7 @@
 .advantages__thumb {
   display: flex;
   justify-content: center;
-  position: relative;
+  // position: relative;
 
   margin: 0 auto;
   width: 50px;
@@ -38,10 +38,10 @@
   }
 }
 
-.advantages__img {
-  position: absolute;
-  top: 7px;
-}
+// .advantages__img {
+//   position: absolute;
+//   top: 7px;
+// }
 
 .advantages__title {
   margin-bottom: 18px;
@@ -105,6 +105,8 @@
 
   flex-wrap: wrap;
   width: 100%;
+  margin: 0 auto;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     gap: 80px;
@@ -116,6 +118,7 @@
 }
 
 .advantages__item {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -125,5 +128,209 @@
 
   @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 30px * 2) / 3);
+  }
+}
+
+.advantages__item:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  border: none;
+
+  top: 7px;
+  left: 97px;
+
+  background-image: url('../images/icon_png/cow@1x.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/icon_png/cow@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/icon_png/cow@3x.png');
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    left: 72.5px;
+    top: 7px;
+
+    background-image: url('../images/icon_png/cow@1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/icon_png/cow@2x.png');
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/icon_png/cow@3x.png');
+    }
+  }
+
+  // Desktop
+
+  @media screen and (min-width: 1200px) {
+    top: 7px;
+    left: 166;
+
+    background-image: url('../images/icon_png/cow@1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/icon_png/cow@2x.png');
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/icon_png/cow@3x.png');
+    }
+  }
+}
+
+.advantages__item:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  border: none;
+
+  top: 7px;
+  left: 96.5px;
+
+  background-image: url('../images/icon_png/weight@1x.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/icon_png/weight@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/icon_png/weight@3x.png');
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    left: 72px;
+    top: 7px;
+
+    background-image: url('../images/icon_png/weight@1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/icon_png/weight@2x.png');
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/icon_png/weight@3x.png');
+    }
+  }
+
+  // Desktop
+
+  @media screen and (min-width: 1200px) {
+    top: 7px;
+    left: 166;
+
+    background-image: url('../images/icon_png/weight@1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/icon_png/weight@2x.png');
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/icon_png/weight@3x.png');
+    }
+  }
+}
+
+.advantages__item:nth-child(3)::after {
+  content: '';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  border: none;
+
+  top: 7px;
+  left: 97.5px;
+
+  background-image: url('../images/icon_png/icecream@1x.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/icon_png/icecream@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/icon_png/icecream@3x.png');
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    left: 73px;
+    top: 7px;
+
+    background-image: url('../images/icon_png/icecream@1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/icon_png/icecream@2x.png');
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/icon_png/icecream@3x.png');
+    }
+  }
+
+  // Desktop
+
+  @media screen and (min-width: 1200px) {
+    top: 7px;
+    left: 167;
+
+    background-image: url('../images/icon_png/icecream@1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/icon_png/icecream@2x.png');
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/icon_png/icecream@3x.png');
+    }
   }
 }

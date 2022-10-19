@@ -99,12 +99,19 @@ $main-transition-time: 250ms;
       background-image: url('../images/sprite.svg#button-arrow');
       background-repeat: no-repeat;
       background-size: contain;
+
+      background-color: getColor('main-text-black');
+      mask-image: url('../images/sprite.svg#button-arrow');
   
       height: 8px;
       width: 5px;
       position: absolute;
       top: calc(50% - 4px);
       right: 0px + $space-after-arrow;
+    }
+
+    &:focus::after {
+        background-color: getColor('modalback-and-textcolor-white');
     }
   }
 

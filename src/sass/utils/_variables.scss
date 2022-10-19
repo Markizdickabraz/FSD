@@ -87,6 +87,8 @@ $main-transition-time: 250ms;
       position: absolute;
       top: calc(50% - 4px);
       right: 0px + $space-after-arrow;
+
+      transition: background-color $main-transition-time $cubic-bezier;
     }
 
     &:focus::after {

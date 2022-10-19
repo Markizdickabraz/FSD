@@ -1,7 +1,5 @@
 .header {
   background-color: getColor('main-background-color');
-  position: sticky;
-  top: 0;
   z-index: 3;
 }
 
@@ -129,7 +127,7 @@
   padding-top: 100px;
   padding-bottom: 63px;
   background-color: getColor('main-background-color');
-
+    
   transform: translateX(100%);
   transition: transform 250ms($cubic-bezier);
 

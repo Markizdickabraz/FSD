@@ -178,6 +178,34 @@
 .block-gallery {
     display: none;
 
+    &__link {
+        display: block;
+        height: 15px;
+        width: 38px;
+        cursor: pointer;
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../images/icon_svg/arrow_white_default.svg);
+
+        transition-property: height, width, background-image;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover {
+        height: 15px;
+        width: 48px;
+        background-image: url(../images/icon_svg/arrow_white_hover.svg);
+        }
+
+        &:focus {
+        height: 20px;
+        width: 48px;
+        background-image: url(../images/icon_svg/arrow_white_focus.svg);
+        }
+    }
+    
+
     @media screen and (min-width: 768px) {
             display: flex;
             max-width: 152px;

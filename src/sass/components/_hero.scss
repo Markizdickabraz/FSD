@@ -1,7 +1,11 @@
 .hero {
+    margin-left: auto;
+    margin-right: auto;
     background-color: getColor('main-background-color');
+    
 
     &__container {
+        max-width: 320px;
         height: 392px;
         padding-top: 16px;
         position: relative;
@@ -28,13 +32,15 @@
             }
 
         @media screen and (min-width: 768px) {
+                max-width: 768px;
                 height: 343px;
-                background-size: 400px 480px,
+                padding-top: 36px;
+                background-size: 355px 425px,
                     152px 152px, contain;
                 background-image: url(../images/tablet/icecreamhero-tablet@1x.webp),
                         url(../images/tablet/galleryhero-tablet@1x.webp),
                         url(../images/tablet/pointshero-tablet@1x.webp);
-                    background-position: top -78px right 15px,
+                    background-position: top -28px right 20px,
                         bottom 13px left 32px, left 0px bottom 0px;
                     @media screen and (min-device-pixel-ratio: 2),
                     screen and (min-resolution: 192dpi),
@@ -54,12 +60,14 @@
             }
         
             @media screen and (min-width: 1200px) {
-                height: 556px;
-                background-size: 600px 740px, contain,  225px 225px;
+                max-width: 1200px;
+                padding-top: 45px;
+                height: 585px;
+                background-size: 570px 700px, contain,  225px 225px;
                 background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp),
                         url(../images/desktop/main/pointshero-desktop@1x.webp),
                         url(../images/desktop/main/galleryhero-desktop@1x.webp);
-                    background-position: top -80px left 580px, left 0px bottom 0px, bottom 65px left 17px;
+                    background-position: top -20px left 580px, left 0px bottom 0px, bottom 65px left 17px;
                 
                     @media screen and (min-device-pixel-ratio: 2),
                     screen and (min-resolution: 192dpi),
@@ -210,6 +218,17 @@
             top: 16px;
             right: 32px;
         }
+
+                @media screen and (min-width: 768px) {
+                    top: 36px;
+
+                }
+        
+        
+                @media screen and (min-width: 1200px) {
+                    top: 45px;
+                }
+
 
         &__amount {
             @include number_hero-fonts;

@@ -2,7 +2,7 @@
     padding-top: 80px;
     padding-bottom: 48px;
     background-color: #fff;
-    background-image: url('../images/mobile/main/background1@1x.jpg');
+    background-image: url('../src/images/mobile/main/background1@1x.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,21 +10,25 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        background-image: url('../images/mobile/main/background1@2x.jpg');
+        background-image: url('../src/images/mobile/main/background1@2x.jpg');
     }
 
 
     @media screen and (min-width: 768px) {
         padding-top: 60px;
         padding-bottom: 80px;
-        background-image: url('../images/desktop/backgrounds/background1@1x.jpg');
+        background-image: url('../src/images/desktop/backgrounds/background1@1x.jpg');
     }
 
     @media screen and (min-width: 1200px) {
         padding-top: 128px;
         padding-bottom: 100px;
-        background-image: url('../images/desktop/backgrounds/background1@2x.jpg');
+        background-image: url('../src/images/desktop/backgrounds/background1@2x.jpg');
     }
+}
+
+.customer__image {
+    display: flex;
 }
 
 .swiper-wrapper list {
@@ -40,7 +44,7 @@
     margin-bottom: 32px;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 28px;
+        margin-bottom: 28px;
     }
 
 }

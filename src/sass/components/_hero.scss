@@ -6,7 +6,7 @@
 
     &__container {
         max-width: 320px;
-        height: 392px;
+        height: 100vh;
         padding-top: 16px;
         position: relative;
         background-size: 260px 315px,
@@ -14,7 +14,7 @@
         background-repeat: no-repeat;
         background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp),
         url(../images/mobile/main/pointshero-mobile@1x.webp);
-        background-position: top 130px left 33px,
+        background-position: bottom -52px left 33px,
             left 0px bottom 0px;
 
         @media screen and (min-device-pixel-ratio: 2),

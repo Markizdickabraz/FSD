@@ -1,6 +1,13 @@
 .header {
-  background-color: getColor('main-background-color');
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
   z-index: 3;
+}
+
+.is-scrolled {
+  background-color: getColor('main-background-color');
 }
 
 .nav-container {

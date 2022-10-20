@@ -163,33 +163,43 @@
 }
 
 .location-close__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--btnlet-color);
-  transition: fill var(--timing-function);
-  cursor: pointer;
-  top: 8px;
-  right: 8px;
-  width: 16px;
-  height: 16px;
-  padding: 6px;
+  @include modal-close();
+  
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    @media screen and (min-width: 768px) {
+      top: 20px;
+      right: 20px;
+    }
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // position: absolute;
+  // border-radius: 50%;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  // background-color: var(--btnlet-color);
+  // transition: fill var(--timing-function);
+  // cursor: pointer;
+  // top: 8px;
+  // right: 8px;
+  // width: 16px;
+  // height: 16px;
+  // padding: 6px;
 
-  @media screen and (min-width: 768px) {
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-  }
+  // @media screen and (min-width: 768px) {
+  //   top: 10px;
+  //   right: 10px;
+  //   width: 20px;
+  //   height: 20px;
+  // }
 }
 
-.location-close__button:hover,
-.location-close__button {
-  fill: getColor('bright-green-btn');
-}
+// .location-close__button:hover,
+// .location-close__button {
+//   fill: getColor('bright-green-btn');
+// }
 
 .location-modal__map {
   padding: 0;
@@ -199,10 +209,13 @@
 .location-modal__frame {
   max-width: 224px;
   height: 199px;
+  margin: 20px 28px;
 
   @media screen and (min-width: 768px) {
     max-width: 448px;
     height: 260px;
+    margin: 32px 60px;
+
   }
 }
 
@@ -213,13 +226,19 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: getColor('#131313;');
-  margin-bottom: 25px;
-  margin-left: 0;
-  margin-right: 0;
+  // margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .location-modal__btn {
   @include button();
+    @include btn_modal-fonts;
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   // display: block;
   // width: 132px;
   // height: 42px;
@@ -242,7 +261,7 @@
   //     align-items: center;
   //     text-align: center;
   //     color: #131313;
-}
+
 
 // .location-modal__btn:hover {
 //     background-color: green;

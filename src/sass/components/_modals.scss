@@ -1,230 +1,246 @@
-
 // Franchising modal
 
 .franchise__button {
-    @include button();
+  @include button();
 }
 
 .backdrop {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-  
-    background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .franchise-modal {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 
-    width: 280px;
-    z-index: 999;
- 
-    background-color: getColor('modalback-and-textcolor-white');
-    border: 2px solid getColor('main-yellow');
-    border-radius: 10px;
+  width: 280px;
+  z-index: 999;
 
-    transform: translate(-50%, -50%);
+  background-color: getColor('modalback-and-textcolor-white');
+  border: 2px solid getColor('main-yellow');
+  border-radius: 10px;
 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 28px;
-    padding-bottom: 28px;
+  transform: translate(-50%, -50%);
 
-    @media screen and (min-width: 768px) {
-        width: 568px;
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .franchise-modal__head {
-    @include modal_title-fonts;
-    margin-bottom: 20px;
+  @include modal_title-fonts;
+  margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) {
-        width: 322px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 24px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 322px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
 }
 
 .franchise-modal__text {
-    @include modal_text-fonts;
-    margin-bottom: 24px;
+  @include modal_text-fonts;
+  margin-bottom: 24px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 32px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
 }
 
 .franchise-modal__group {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 32px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
 }
 
 .franchise-modal__group input {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 }
 
 .franchise-modal__item {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .franchise-modal__input,
 .franchise-modal__message {
-    @include modal_form-fonts;
+  @include modal_form-fonts;
 
-    background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
-    border-radius: 10px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84A178;
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
+
+  &::placeholder {
+    @include modal_placeholder-fonts;
+    color: getColor('main-text-black');
 
     @media screen and (min-width: 768px) {
-        width: 368px;
+      font-size: 14px;
     }
-
-    &::placeholder {
-        @include modal_placeholder-fonts;
-        color: getColor('main-text-black');
-
-        @media screen and (min-width: 768px) {
-            font-size: 14px;
-        }
-    }
+  }
 }
 
 .franchise-modalsubmit__btn {
-    @include button();
-    @include btn_modal-fonts;
+  @include button();
+  @include btn_modal-fonts;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .franchise-modalclose__btn {
-    @include modal-close();
+  @include modal-close();
 
-    position: absolute;
-    top: 8px;
-    right: 8px;
-  
-    @media screen and (min-width: 768px) {
-      top: 20px;
-      right: 20px;
-    }
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 
 // Location modal
 .location-modal {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    transition: $cubic-bezier $main-transition-time;    
-    padding: 40px;
-    border-radius: 10px;
-    background-color: getColor('modalback-and-textcolor-white');
-    max-width: 280px;
-    @media screen and (min-width: 768px) {
-      max-width: 568px;  
-    }
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 30;
+  transform: translate(-50%, -50%);
+  transition: $cubic-bezier $main-transition-time;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: getColor('modalback-and-textcolor-white');
+  max-width: 280px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 568px;
+  }
+
+}
+
+.modal,
+.overlay {
+  visibility: hidden;
+
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+
 }
 
 .location-close__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;    
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--btnlet-color);
-    transition: fill var(--timing-function);
-    cursor: pointer;
-    top: 8px;
-    right: 8px;
-    width: 16px;
-    height: 16px;
-    padding: 6px;
-    @media screen and (min-width: 768px) {
-            top: 10px;
-            right: 10px;
-            width: 20px;
-            height: 20px;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--btnlet-color);
+  transition: fill var(--timing-function);
+  cursor: pointer;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  padding: 6px;
+
+  @media screen and (min-width: 768px) {
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .location-close__button:hover,
 .location-close__button {
-    fill: getColor('bright-green-btn');
+  fill: getColor('bright-green-btn');
 }
 
 .location-modal__map {
-    padding: 0;
-    background-color: getColor('modalback-and-textcolor-white');
+  padding: 0;
+  background-color: getColor('modalback-and-textcolor-white');
 }
 
 .location-modal__frame {
-    max-width: 224px;
-    height: 199px;
-    @media screen and (min-width: 768px){
-        max-width: 448px;
-        height: 260px;
-    }
+  max-width: 224px;
+  height: 199px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 448px;
+    height: 260px;
+  }
 }
 
 .location-modal__head {
-    @include modal_title-fonts();
-    display: block;
-    font-weight: 400;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: getColor('#131313;');
-    margin-bottom: 25px;
-    margin-left: 0;
-    margin-right: 0;
+  @include modal_title-fonts();
+  display: block;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: getColor('#131313;');
+  margin-bottom: 25px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .location-modal__btn {
-    @include button();
-    // display: block;
-    // width: 132px;
-    // height: 42px;
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: calc(30/16);
-    // background-color: var(--btnbg-color);
-    // text-align: center;
-    // border: none;
-    // border-radius: 4px;
-    // margin: 0 auto;
-    // margin-top: 20px;
-    // cursor: pointer;
-    // font-family: 'Montserrat';
-    //     font-style: normal;
-    //     font-weight: 600;
-    //     font-size: 12px;
-    //     line-height: 15px;
-    //     display: flex;
-    //     align-items: center;
-    //     text-align: center;
-    //     color: #131313;
+  @include button();
+  // display: block;
+  // width: 132px;
+  // height: 42px;
+  // font-weight: 700;
+  // font-size: 16px;
+  // line-height: calc(30/16);
+  // background-color: var(--btnbg-color);
+  // text-align: center;
+  // border: none;
+  // border-radius: 4px;
+  // margin: 0 auto;
+  // margin-top: 20px;
+  // cursor: pointer;
+  // font-family: 'Montserrat';
+  //     font-style: normal;
+  //     font-weight: 600;
+  //     font-size: 12px;
+  //     line-height: 15px;
+  //     display: flex;
+  //     align-items: center;
+  //     text-align: center;
+  //     color: #131313;
 }
 
 // .location-modal__btn:hover {
@@ -273,11 +289,13 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border: 2px solid getColor('main-yellow');
   border-radius: 10px;
+  z-index: 30;
 
   @media screen and (min-width: 768px) {
     width: 568px;
   }
 }
+
 .icecream-title {
   font-family: 'Seymour One';
   font-size: 20px;
@@ -326,14 +344,14 @@
   @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
-  background-image: url(../images/mobile/ingredients_modal/icecream_lm_@2x.png);
-}
+    background-image: url(../images/mobile/ingredients_modal/icecream_lm_@2x.png);
+  }
 
-@media screen and (min-device-pixel-ratio: 3),
+  @media screen and (min-device-pixel-ratio: 3),
   screen and (min-resolution: 288dpi),
   screen and (min-resolution: 3dppx) {
-  background-image: url(../images/mobile/ingredients_modal/icecream_lm_@3x.png);
-}
+    background-image: url(../images/mobile/ingredients_modal/icecream_lm_@3x.png);
+  }
 }
 
 
@@ -348,7 +366,7 @@
   padding: 12px 0px 8px 0px;
   align-items: center;
   transition-property: border;
-  transition: $cubic-bezier $main-transition-time;  
+  transition: $cubic-bezier $main-transition-time;
 
   @media screen and (min-width: 768px) {
     width: 65px;
@@ -473,7 +491,7 @@
   padding: 11px 16px;
   outline: transparent;
   transition-property: border-color;
-  transition: $cubic-bezier $main-transition-time;  
+  transition: $cubic-bezier $main-transition-time;
 
   @media screen and (max-width: 767px) {
     width: 240px;
@@ -488,11 +506,13 @@
 .register-form__input:focus {
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
 }
+
 .register-form__message::placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: getColor('main-text-black');
 }
+
 .register-form__message {
   resize: none;
   width: 240px;
@@ -504,7 +524,7 @@
   margin-bottom: 32px;
   outline: transparent;
   transition-property: border-color;
-  transition: $cubic-bezier $main-transition-time;  
+  transition: $cubic-bezier $main-transition-time;
 
   @media screen and (min-width: 768px) {
     width: 368px;
@@ -528,7 +548,7 @@
   margin: 0 auto;
   font-family: inherit;
   transition-property: background-color;
-  transition: $cubic-bezier $main-transition-time;  
+  transition: $cubic-bezier $main-transition-time;
 }
 
 .register-form__btn:hover {
@@ -556,11 +576,10 @@
   align-items: center;
   justify-content: center;
   transition-property: fill;
-  transition: $cubic-bezier $main-transition-time;  
+  transition: $cubic-bezier $main-transition-time;
 }
 
 .modal-products__button:hover,
 .modal-products__button:focus {
   fill: getColor(bright-green-btn);
 }
-

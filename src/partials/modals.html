@@ -234,11 +234,11 @@
     <form class="register-form" name="register-form">
       <div class="register-form__group" role="group">
         <label class="register-form__label">
-          <input class="register-form__input" type="text" name="user-name" placeholder="Name" pattern="^[a-zA-Z]+$" maxlength="30" required />
+          <input class="register-form__input" type="text" name="user-name" placeholder="Name" minlength="4" required />
         </label>
 
         <label class="register-form__label">
-          <input class="register-form__input" type="tel" name="user-phone" placeholder="Phone" pattern="^[a-zA-Z0-9]+$" maxlength="12" required />
+          <input class="register-form__input" type="tel" name="user-phone" placeholder="Phone"  minlength="10" required />
         </label>
 
         <label class="register-form__label">

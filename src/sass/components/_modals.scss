@@ -327,6 +327,7 @@
 .backdrop {
   display: block;
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -685,6 +686,9 @@
 .header-modal {
   position: absolute;
   padding: 40px;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
 
   width: 280px;
   max-width: 100%;

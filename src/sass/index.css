@@ -88,9 +88,22 @@ body {
   overflow: hidden;
 }
 
+body,
+button,
+a {
+  cursor: url("../images/icon_svg/vector.svg"), auto;
+}
+
 .header {
-  background-color: #84a178;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
   z-index: 3;
+}
+
+.is-scrolled {
+  background-color: #84a178;
 }
 
 .nav-container {
@@ -323,14 +336,14 @@ body {
   background-color: #84a178;
 }
 .hero__container {
-  max-width: 320px;
-  height: 80vh;
-  padding-top: 16px;
+  max-width: 480px;
+  height: 100vh;
+  padding-top: 110px;
   position: relative;
-  background-size: 260px 315px, 320px 49px;
+  background-size: 310px 380px, 440px 70px;
   background-repeat: no-repeat;
   background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp), url(../images/mobile/main/pointshero-mobile@1x.webp);
-  background-position: bottom -52px left 33px, left 0px bottom 0px;
+  background-position: bottom -60px right 50%, left 50% bottom 0px;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero__container {
@@ -345,11 +358,11 @@ body {
 @media screen and (min-width: 768px) {
   .hero__container {
     max-width: 768px;
-    height: 343px;
-    padding-top: 36px;
-    background-size: 355px 425px, 152px 152px, contain;
+    height: 415px;
+    padding-top: 104px;
+    background-size: 390px 470px, 152px 152px, contain;
     background-image: url(../images/tablet/icecreamhero-tablet@1x.webp), url(../images/tablet/galleryhero-tablet@1x.webp), url(../images/tablet/pointshero-tablet@1x.webp);
-    background-position: top -28px right 20px, bottom 13px left 32px, left 0px bottom 0px;
+    background-position: bottom -60px right 25px, bottom 13px left 32px, left 0px bottom 0px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -365,11 +378,11 @@ body {
 @media screen and (min-width: 1200px) {
   .hero__container {
     max-width: 1200px;
-    padding-top: 45px;
-    height: 585px;
-    background-size: 570px 700px, contain, 225px 225px;
+    padding-top: 118px;
+    height: 664px;
+    background-size: 600px 750px, contain, 225px 225px;
     background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp), url(../images/desktop/main/pointshero-desktop@1x.webp), url(../images/desktop/main/galleryhero-desktop@1x.webp);
-    background-position: top -20px left 580px, left 0px bottom 0px, bottom 65px left 17px;
+    background-position: bottom -100px left 560px, left 0px bottom 0px, bottom 65px left 17px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -558,12 +571,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .institutions {
-    top: 36px;
+    top: 94px;
   }
 }
 @media screen and (min-width: 1200px) {
   .institutions {
-    top: 45px;
+    top: 126px;
   }
 }
 .institutions__amount {
@@ -3265,7 +3278,7 @@ body {
   background-color: #fcfcfc;
   border-radius: 10px;
   border: 2px solid #F8D24E;
-  z-index: 999;
+  z-index: 30;
 }
 @media screen and (min-width: 768px) {
   .header-modal {

@@ -163,33 +163,43 @@
 }
 
 .location-close__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--btnlet-color);
-  transition: fill var(--timing-function);
-  cursor: pointer;
-  top: 8px;
-  right: 8px;
-  width: 16px;
-  height: 16px;
-  padding: 6px;
+  @include modal-close();
+  
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    @media screen and (min-width: 768px) {
+      top: 20px;
+      right: 20px;
+    }
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // position: absolute;
+  // border-radius: 50%;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  // background-color: var(--btnlet-color);
+  // transition: fill var(--timing-function);
+  // cursor: pointer;
+  // top: 8px;
+  // right: 8px;
+  // width: 16px;
+  // height: 16px;
+  // padding: 6px;
 
-  @media screen and (min-width: 768px) {
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-  }
+  // @media screen and (min-width: 768px) {
+  //   top: 10px;
+  //   right: 10px;
+  //   width: 20px;
+  //   height: 20px;
+  // }
 }
 
-.location-close__button:hover,
-.location-close__button {
-  fill: getColor('bright-green-btn');
-}
+// .location-close__button:hover,
+// .location-close__button {
+//   fill: getColor('bright-green-btn');
+// }
 
 .location-modal__map {
   padding: 0;
@@ -199,10 +209,16 @@
 .location-modal__frame {
   max-width: 224px;
   height: 199px;
+  margin-left: 28px;
+    margin-right: 28px;
+    margin-top: 20px;
 
   @media screen and (min-width: 768px) {
     max-width: 448px;
     height: 260px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top:32px;
   }
 }
 
@@ -220,6 +236,16 @@
 
 .location-modal__btn {
   @include button();
+  @include btn_modal-fonts;
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+
+    @media screen and (min-width: 768px){
+      margin-top: 32px;
+    }
   // display: block;
   // width: 132px;
   // height: 42px;

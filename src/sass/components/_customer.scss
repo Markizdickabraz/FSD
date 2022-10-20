@@ -66,9 +66,17 @@
 
 .customer-reviews__wrapper {
     background-color: getColor('main-background-color');
+    margin: 0 auto;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-right: 74px;
+    padding-left: 73px;
+    align-items: center;
     width: 968px;
     height: 138px;
-    border-radius: 24px
+    border-radius: 24px;
+    
+    
 }
 
 

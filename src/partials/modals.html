@@ -149,7 +149,7 @@
         </label>
 
         <label class="form-fields__field">
-          <input type="tel" name="tel" placeholder="Phone" pattern="^[a-zA-Z0-9]+$" maxlength="12"
+          <input type="tel" name="tel" placeholder="Phone" pattern="^[0-9]" maxlength="12"
             class="form-fields__input" title="Phone should only contain numbers." required />
         </label>
 
@@ -167,11 +167,11 @@
 <!-- Modal products -->
 
 <div class="backdrop overlay js-overlay-modal">
-  <div class="modal-products conteiner modal" data-modal="products">
+  <div class="modal-products conteiner modal " data-modal="products">
     <!-- Button close -->
     <button class="modal-products__button js-modal-close" type="button">
       <svg class="modal-products__icons" width="18" height="18">
-        <use href="./images/sprite.svg#close1"></use>
+        <use href="./images/sprite.svg#close_black"></use>
       </svg>
     </button>
 
@@ -234,11 +234,11 @@
     <form class="register-form" name="register-form">
       <div class="register-form__group" role="group">
         <label class="register-form__label">
-          <input class="register-form__input" type="text" name="user-name" placeholder="Name" required />
+          <input class="register-form__input" type="text" name="user-name" placeholder="Name" pattern="^[a-zA-Z]+$" maxlength="30" required />
         </label>
 
         <label class="register-form__label">
-          <input class="register-form__input" type="tel" name="user-phone" placeholder="Phone" required />
+          <input class="register-form__input" type="tel" name="user-phone" placeholder="Phone" pattern="^[a-zA-Z0-9]+$" maxlength="12" required />
         </label>
 
         <label class="register-form__label">

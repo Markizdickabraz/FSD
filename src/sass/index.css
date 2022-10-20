@@ -2880,9 +2880,10 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 3000;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* Оформление формы  products*/
@@ -2893,11 +2894,13 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 280px;
+  height: 960px;
   background: #fcfcfc;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border: 2px solid #f8d24e;
   border-radius: 10px;
-  z-index: 30;
+  z-index: 1000;
+  overflow: auto;
 }
 @media screen and (min-width: 768px) {
   .modal-products {
@@ -3079,31 +3082,27 @@ a {
   text-align: center;
   justify-content: center;
 }
-
 .register-form__input::-moz-placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
 }
-
 .register-form__input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
 }
-
 .register-form__input::placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
 }
-
 .register-form__input {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
   height: 42px;
-  border: 1px solid #131313;
+  border: 1px solid #84A178;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 11px 16px;
@@ -3144,63 +3143,6 @@ a {
   }
 }
 
-.register-form__input {
-  background-color: rgba(248, 210, 78, 0.1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.register-form__input:invalid:not(:-moz-placeholder-shown) {
-  border-color: red;
-}
-.register-form__input:invalid:not(:-ms-input-placeholder) {
-  border-color: red;
-}
-.register-form__input:invalid:not(:placeholder-shown) {
-  border-color: red;
-}
-.register-form__input:valid:not(:-moz-placeholder-shown) {
-  border-color: #84a178;
-}
-.register-form__input:valid:not(:-ms-input-placeholder) {
-  border-color: #84a178;
-}
-.register-form__input:valid:not(:placeholder-shown) {
-  border-color: #84a178;
-}
-.register-form__input:focus {
-  outline: none;
-  border: 1px solid #f8d24e;
-}
-
-.register-form__message::-moz-placeholder {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #131313;
-}
-
-.register-form__message:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #131313;
-}
-
-.register-form__message::placeholder {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #131313;
-}
-.register-form__message::-moz-placeholder:focus {
-  outline: none;
-  border: 1px solid #f8d24e;
-}
-.register-form__message:-ms-input-placeholder:focus {
-  outline: none;
-  border: 1px solid #f8d24e;
-}
-.register-form__message::placeholder:focus {
-  outline: none;
-  border: 1px solid #f8d24e;
-}
-
 .register-form__message {
   resize: none;
   width: 240px;
@@ -3226,10 +3168,30 @@ a {
 }
 
 .register-form__btn {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: 1.22;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 34px;
+  padding-right: 34px;
+  border-radius: 10px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #131313;
+  border: none;
+  background-color: #f8d24e;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: 1.22;
+  font-size: 14px;
+  letter-spacing: 0.04em;
   display: block;
   width: 121px;
   height: 42px;
-  background-color: #f8d24e;
   border-radius: 10px;
   text-align: center;
   border: none;
@@ -3238,15 +3200,14 @@ a {
   transition-property: background-color;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
-
-.register-form__btn:hover {
+.register-form__btn:focus {
+  color: #fcfcfc;
+}
+.register-form__btn:hover, .register-form__btn:focus {
   background-color: #0a8817;
 }
-
-.register-form__btn:focus {
-  background-color: #0a8817;
-  color: #f5f5f5;
-  outline: transparent;
+.register-form__btn:disabled {
+  background-color: #ababab;
 }
 
 .modal-products__button {

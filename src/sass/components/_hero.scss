@@ -1,261 +1,276 @@
 .hero {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: getColor('main-background-color');
+    margin-left: auto;
+    margin-right: auto;
+    background-color: getColor('main-background-color');
+    
 
-  &__container {
-    max-width: 320px;
-    height: 392px;
-    padding-top: 16px;
-    position: relative;
-    background-size: 260px 315px, 320px 49px;
-    background-repeat: no-repeat;
-    background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp),
-      url(../images/mobile/main/pointshero-mobile@1x.webp);
-    background-position: top 130px left 33px, left 0px bottom 0px;
+    &__container {
+        max-width: 320px;
+        height: 80vh;
+        padding-top: 16px;
+        position: relative;
+        background-size: 260px 315px,
+            320px 49px;
+        background-repeat: no-repeat;
+        background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp),
+        url(../images/mobile/main/pointshero-mobile@1x.webp);
+        background-position: bottom -52px left 33px,
+            left 0px bottom 0px;
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/mobile/main/icecreamhero-mobile@2x.webp),
-        url(../images/mobile/main/pointshero-mobile@2x.webp);
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: url(../images/mobile/main/icecreamhero-mobile@2x.webp),
+                url(../images/mobile/main/pointshero-mobile@2x.webp);
+            }
+        
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and (min-resolution: 3dppx) {
+                background-image: url(../images/mobile/main/icecreamhero-mobile@3x.webp),
+                    url(../images/mobile/main/pointshero-mobile@3x.webp);
+            }
+
+        @media screen and (min-width: 768px) {
+                max-width: 768px;
+                height: 343px;
+                padding-top: 36px;
+                background-size: 355px 425px,
+                    152px 152px, contain;
+                background-image: url(../images/tablet/icecreamhero-tablet@1x.webp),
+                        url(../images/tablet/galleryhero-tablet@1x.webp),
+                        url(../images/tablet/pointshero-tablet@1x.webp);
+                    background-position: top -28px right 20px,
+                        bottom 13px left 32px, left 0px bottom 0px;
+                    @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                        background-image: url(../images/tablet/icecreamhero-tablet@2x.webp),
+                           url(../images/tablet/galleryhero-tablet@2x.webp)
+                            url(../images/tablet/pointshero-tablet@2x.webp);
+                    }
+                
+                    @media screen and (min-device-pixel-ratio: 3),
+                    screen and (min-resolution: 288dpi),
+                    screen and (min-resolution: 3dppx) {
+                        background-image: url(../images/tablet/icecreamhero-tablet@3x.webp),
+                            url(../images/tablet/galleryhero-tablet@3x.webp),
+                            url(../images/tablet/pointshero-tablet@3x.webp);
+                    }
+            }
+        
+            @media screen and (min-width: 1200px) {
+                max-width: 1200px;
+                padding-top: 45px;
+                height: 585px;
+                background-size: 570px 700px, contain,  225px 225px;
+                background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp),
+                        url(../images/desktop/main/pointshero-desktop@1x.webp),
+                        url(../images/desktop/main/galleryhero-desktop@1x.webp);
+                    background-position: top -20px left 580px, left 0px bottom 0px, bottom 65px left 17px;
+                
+                    @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                        background-image: url(../images/desktop/main/icecreamhero-desktop@2x.webp),
+                            url(../images/desktop/main/pointshero-desktop@2x.webp),
+                            url(../images/desktop/main/galleryhero-desktop@2x.webp);
+                    }
+                
+                    @media screen and (min-device-pixel-ratio: 3),
+                    screen and (min-resolution: 288dpi),
+                    screen and (min-resolution: 3dppx) {
+                        background-image: url(../images/desktop/main/icecreamhero-desktop@3x.webp),
+                            url(../images/desktop/main/pointshero-desktop@3x.webp),
+                            url(../images/desktop/main/galleryhero-desktop@3x.webp);
+                    }
+            }
+                        
     }
 
-    @media screen and (min-device-pixel-ratio: 3),
-      screen and (min-resolution: 288dpi),
-      screen and (min-resolution: 3dppx) {
-      background-image: url(../images/mobile/main/icecreamhero-mobile@3x.webp),
-        url(../images/mobile/main/pointshero-mobile@3x.webp);
+    
+
+    &__title {
+        display: block;
+        width: 247px;
+        margin-bottom: 32px;
+        color: getColor('modalback-and-textcolor-white');
+        @include hero_title-fonts;
+
+        @media screen and (min-width: 768px) {
+                width: 181px;
+                margin-bottom: 21px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                width: 367px;
+                margin-bottom: 28px;
+            }
     }
 
-    @media screen and (min-width: 768px) {
-      max-width: 768px;
-      height: 343px;
-      padding-top: 36px;
-      background-size: 355px 425px, 152px 152px, contain;
-      background-image: url(../images/tablet/icecreamhero-tablet@1x.webp),
-        url(../images/tablet/galleryhero-tablet@1x.webp),
-        url(../images/tablet/pointshero-tablet@1x.webp);
-      background-position: top -28px right 20px, bottom 13px left 32px,
-        left 0px bottom 0px;
-      @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
-        background-image: url(../images/tablet/icecreamhero-tablet@2x.webp),
-          url(../images/tablet/galleryhero-tablet@2x.webp)
-            url(../images/tablet/pointshero-tablet@2x.webp);
-      }
-
-      @media screen and (min-device-pixel-ratio: 3),
-        screen and (min-resolution: 288dpi),
-        screen and (min-resolution: 3dppx) {
-        background-image: url(../images/tablet/icecreamhero-tablet@3x.webp),
-          url(../images/tablet/galleryhero-tablet@3x.webp),
-          url(../images/tablet/pointshero-tablet@3x.webp);
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 1200px;
-      padding-top: 45px;
-      height: 585px;
-      background-size: 570px 700px, contain, 225px 225px;
-      background-image: url(../images/desktop/main/icecreamhero-desktop@1x.webp),
-        url(../images/desktop/main/pointshero-desktop@1x.webp),
-        url(../images/desktop/main/galleryhero-desktop@1x.webp);
-      background-position: top -20px left 580px, left 0px bottom 0px,
-        bottom 65px left 17px;
-
-      @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
-        background-image: url(../images/desktop/main/icecreamhero-desktop@2x.webp),
-          url(../images/desktop/main/pointshero-desktop@2x.webp),
-          url(../images/desktop/main/galleryhero-desktop@2x.webp);
-      }
-
-      @media screen and (min-device-pixel-ratio: 3),
-        screen and (min-resolution: 288dpi),
-        screen and (min-resolution: 3dppx) {
-        background-image: url(../images/desktop/main/icecreamhero-desktop@3x.webp),
-          url(../images/desktop/main/pointshero-desktop@3x.webp),
-          url(../images/desktop/main/galleryhero-desktop@3x.webp);
-      }
-    }
-  }
-
-  &__title {
-    display: block;
-    width: 247px;
-    margin-bottom: 32px;
-    color: getColor('modalback-and-textcolor-white');
-    @include hero_title-fonts;
-
-    @media screen and (min-width: 768px) {
-      width: 181px;
-      margin-bottom: 21px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 367px;
-      margin-bottom: 28px;
-    }
-  }
 }
 
 .anchors {
-  display: flex;
-  gap: 8px;
-
-  @media screen and (min-width: 1200px) {
-    gap: 12px;
-  }
-
-  &__products {
-    padding: 7px 10px;
-    @include anchors_link-fonts;
-    color: getColor('main-text-black');
-    text-decoration: none;
-
-    border: 2px solid getColor('main-yellow');
-    border-radius: 8px;
-
-    transition-property: border, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    display: flex;
+    gap: 8px;
+    
     @media screen and (min-width: 1200px) {
-      padding: 12px 34px;
-      border-radius: 10px;
+            gap: 12px;
+        }
+
+    &__products {
+        padding: 7px 10px;
+        @include anchors_link-fonts;
+        color: getColor('main-text-black');
+        text-decoration: none;
+
+        border: 2px solid getColor('main-yellow');
+        border-radius: 8px;
+
+        transition-property: border, color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 1200px) {
+                padding: 12px 34px;
+                border-radius: 10px;
+            }
     }
-  }
 
-  &__products:hover {
-    border-color: getColor('bright-green-btn');
-  }
+        &__products:hover {
+            border-color:  getColor('bright-green-btn');
+        }
 
-  &__products:focus {
-    color: getColor('modalback-and-textcolor-white');
-    border-color: getColor('bright-green-btn');
-  }
+        &__products:focus {
+            color: getColor('modalback-and-textcolor-white');
+            border-color:  getColor('bright-green-btn');
+        }
 
-  &__products:disabled {
-    border-color: getColor('text-grey');
-  }
+        &__products:disabled {
+            border-color: getColor('text-grey');
+        }
 
-  &__about {
-    @include anchors_link-fonts;
-    color: getColor('main-yellow');
 
-    transition-property: border, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    &__about {
+        @include anchors_link-fonts;
+        color: getColor('main-yellow');
 
-  &__about:hover {
-    color: getColor('bright-green-btn');
-  }
+        transition-property: border, color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-  &__about:focus {
-    color: getColor('modalback-and-textcolor-white');
-  }
+    &__about:hover {
+        color: getColor('bright-green-btn');
+    }
 
-  &__about:disabled {
-    color: getColor('text-grey');
-  }
+    &__about:focus {
+        color: getColor('modalback-and-textcolor-white');
+    }
+
+    &__about:disabled {
+        color: getColor('text-grey');
+    }
+
+
 }
 
 .block-gallery {
-  display: none;
+    display: none;
 
-  &__link {
-    display: block;
-    height: 15px;
-    width: 38px;
-    cursor: pointer;
+    &__link {
+        display: block;
+        height: 15px;
+        width: 38px;
+        cursor: pointer;
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../images/icon_svg/arrow_white_default.svg);
 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../images/icon_svg/arrow_white_default.svg);
+        transition-property: height, width, background-image;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover {
+        height: 15px;
+        width: 48px;
+        background-image: url(../images/icon_svg/arrow_white_hover.svg);
+        }
 
-    transition-property: height, width, background-image;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      height: 15px;
-      width: 48px;
-      background-image: url(../images/icon_svg/arrow_white_hover.svg);
+        &:focus {
+        height: 20px;
+        width: 48px;
+        background-image: url(../images/icon_svg/arrow_white_focus.svg);
+        }
     }
+    
 
-    &:focus {
-      height: 20px;
-      width: 48px;
-      background-image: url(../images/icon_svg/arrow_white_focus.svg);
+    @media screen and (min-width: 768px) {
+            display: flex;
+            max-width: 152px;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            bottom: 15px;
+            left: 212px;
+        }
+
+                
+    @media screen and (min-width: 1200px) {
+            max-width: 240px;
+            gap: 32px;
+            position: absolute;
+            bottom: 95px;
+            left: 256px;
+        }
+
+    &__text {
+            color: getColor('modalback-and-textcolor-white');
+            @include hero_text-fonts;
+        }
+    
+    &__link {
+        display: block;
+        fill: getColor('modalback-and-textcolor-white');
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    max-width: 152px;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    bottom: 15px;
-    left: 212px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 240px;
-    gap: 32px;
-    position: absolute;
-    bottom: 95px;
-    left: 256px;
-  }
-
-  &__text {
-    color: getColor('modalback-and-textcolor-white');
-    @include hero_text-fonts;
-  }
-
-  &__link {
-    display: block;
-    fill: getColor('modalback-and-textcolor-white');
-  }
 }
 
 .institutions {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    top: 16px;
-    right: 32px;
-  }
+    display: none;
+    @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 16px;
+            right: 32px;
+        }
 
-  @media screen and (min-width: 768px) {
-    top: 36px;
-  }
+                @media screen and (min-width: 768px) {
+                    top: 36px;
 
-  @media screen and (min-width: 1200px) {
-    top: 45px;
-  }
+                }
+        
+        
+                @media screen and (min-width: 1200px) {
+                    top: 45px;
+                }
 
-  &__amount {
-    @include number_hero-fonts;
-    text-align: right;
-    color: getColor('main-text-black');
-  }
 
-  &__title {
-    @include cafes_trucks-fonts;
-    text-align: right;
-    color: getColor('modalback-and-textcolor-white');
-  }
+        &__amount {
+            @include number_hero-fonts;
+            text-align: right;
+            color: getColor('main-text-black');
+        }
 
-  @media screen and (min-width: 1200px) {
-    gap: 16px;
-  }
+        &__title {
+            @include cafes_trucks-fonts;
+            text-align: right;
+            color: getColor('modalback-and-textcolor-white');
+        }
+
+        @media screen and (min-width: 1200px) {
+            gap: 16px;
+        }
 }

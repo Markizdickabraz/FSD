@@ -80,14 +80,21 @@
 .franchise-modal__message {
   @include modal_form-fonts;
 
-  outline: none;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  // outline: none;
 
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84A178;
   border-radius: 10px;
 
+  // background: tomato;
+
   @media screen and (min-width: 768px) {
     width: 368px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   &::placeholder {

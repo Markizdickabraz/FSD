@@ -2669,42 +2669,33 @@ a {
 
 .location-close__button {
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--btnlet-color);
-  transition: fill var(--timing-function);
-  cursor: pointer;
   top: 8px;
   right: 8px;
-  width: 16px;
-  height: 16px;
-  padding: 6px;
+  background-color: transparent;
+  border: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
+}
+.location-close__button:hover, .location-close__button:focus {
+  color: #84a178;
 }
 @media screen and (min-width: 768px) {
   .location-close__button {
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+    top: 20px;
+    right: 20px;
   }
 }
 
-.location-close__button:hover,
-.location-close__button {
-  fill: #0a8817;
-}
-
 .location-modal__map {
-  padding: 0;
   background-color: #fcfcfc;
 }
 
-.location-modal__frame {
-  max-width: 224px;
-  height: 199px;
+@media screen and (max-width: 767px) {
+  .location-modal__frame {
+    max-width: 224px;
+    height: 199px;
+  }
 }
 @media screen and (min-width: 768px) {
   .location-modal__frame {
@@ -2717,13 +2708,14 @@ a {
   font-family: "Seymour One";
   font-size: 16px;
   line-height: 1.4;
-  display: block;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 25px;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 @media screen and (min-width: 768px) {
   .location-modal__head {
@@ -2748,6 +2740,12 @@ a {
   color: #131313;
   border: none;
   background-color: #f8d24e;
+  font-weight: 600;
+  font-size: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
 }
 .location-modal__btn:focus {
   color: #fcfcfc;
@@ -2757,6 +2755,11 @@ a {
 }
 .location-modal__btn:disabled {
   background-color: #ababab;
+}
+@media screen and (min-width: 768px) {
+  .location-modal__btn {
+    font-size: 14px;
+  }
 }
 
 .about-modal-box {

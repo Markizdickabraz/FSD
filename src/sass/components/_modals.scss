@@ -155,42 +155,39 @@
 
 .location-close__button {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--btnlet-color);
-  transition: fill var(--timing-function);
-  cursor: pointer;
-  top: 8px;
-  right: 8px;
-  width: 16px;
-  height: 16px;
-  padding: 6px;
-
-  @media screen and (min-width: 768px) {
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-  }
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    border: none;
+  
+    transition: color 250ms($cubic-bezier);
+    fill: currentColor;
+  
+    &:hover,
+    &:focus {
+      color: getColor('main-background-color');
+    }
+  
+    @media screen and (min-width: 768px) {
+      top: 20px;
+      right: 20px;
+    }
 }
-
-.location-close__button:hover,
-.location-close__button {
-  fill: getColor('bright-green-btn');
-}
-
 .location-modal__map {
-  padding: 0;
   background-color: getColor('modalback-and-textcolor-white');
+  // @media screen and (max-width: 767px){
+  // padding: 15px;}
+  // @media screen and (min-width: 768px){
+  // padding: 32px;
+  // }
 }
-
 .location-modal__frame {
+  @media screen and (max-width: 767px){
   max-width: 224px;
-  height: 199px;
-
+  height: 199px; 
+  
+ }
   @media screen and (min-width: 768px) {
     max-width: 448px;
     height: 260px;
@@ -199,19 +196,27 @@
 
 .location-modal__head {
   @include modal_title-fonts();
-  display: block;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
   text-align: center;
   letter-spacing: 0.03em;
   color: getColor('#131313;');
   margin-bottom: 25px;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .location-modal__btn {
   @include button();
+  @include btn_modal-fonts;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
 }
+
 
 
 

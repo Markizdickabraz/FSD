@@ -80,6 +80,8 @@
 .franchise-modal__message {
   @include modal_form-fonts;
 
+  outline: none;
+
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84A178;
   border-radius: 10px;
@@ -95,6 +97,22 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
     }
+  }
+}
+
+.franchise-modal__input {
+  height: 32px;
+
+  @media screen and (min-width: 768px) {
+    height: 42px;
+  }
+}
+
+.franchise-modal__message {
+  height: 64px;
+
+  @media screen and (min-width: 768px) {
+    height: 84px;
   }
 }
 

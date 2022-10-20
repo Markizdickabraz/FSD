@@ -24,18 +24,6 @@
   }
 }
 
-// .nav__button {
-//   @media screen and (min-width:1199px) {
-//     display: none;
-//   }
-
-//   @media screen and (min-width:767px) and (max-width:1199px) {
-//     margin-left: auto;
-//     margin-right: 38px;
-//   }
-
-//   margin-left: auto;
-// }
 .close-modal__btn {
   position: absolute;
   top: 16px;
@@ -93,15 +81,6 @@
     display: none;
   }
 }
-
-// .toggle-button--close {
-//   right: 20px;
-
-//   @media screen and (min-width: 768px) {
-//     top: 30px;
-//     right: 32px;
-//   }
-// }
 
 .header-button {
   @include button();

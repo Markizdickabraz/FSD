@@ -80,13 +80,15 @@ $main-transition-time: 250ms;
       display: block;
 
       background-color: getColor('main-text-black');
-      mask-image: url('../images/sprite.svg#button-arrow');
+      mask-image: url('../images/arrow.svg');
   
       height: 8px;
       width: 5px;
       position: absolute;
       top: calc(50% - 4px);
       right: 0px + $space-after-arrow;
+
+      transition: background-color $main-transition-time $cubic-bezier;
     }
 
     &:focus::after {
@@ -108,7 +110,7 @@ $main-transition-time: 250ms;
         content: '';
         display: block;
 
-        background-image: url('../images/sprite.svg#close_black');
+        background-image: url('../images/close.svg');
         background-repeat: no-repeat;
         background-size: contain;
 

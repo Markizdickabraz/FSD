@@ -80,11 +80,13 @@
 .franchise-modal__message {
   @include modal_form-fonts;
 
+  width: 100%;
   padding-left: 12px;
   padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
-  // outline: none;
-
+  outline: none;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84A178;
   border-radius: 10px;
@@ -95,6 +97,8 @@
     width: 368px;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 
   &::placeholder {
@@ -105,6 +109,10 @@
       font-size: 14px;
     }
   }
+
+  &:focus {
+    border-color: getColor('main-yellow');
+  }
 }
 
 .franchise-modal__input {
@@ -113,10 +121,15 @@
   @media screen and (min-width: 768px) {
     height: 42px;
   }
+
+  &:invalid {
+    border-color: red;
+  }
 }
 
 .franchise-modal__message {
   height: 64px;
+  resize: none;
 
   @media screen and (min-width: 768px) {
     height: 84px;

@@ -1,0 +1,107 @@
+<!-- Modal products -->
+
+    <!-- <div class="backdrop is-hidden" data-modal> -->
+      <div class="modal-products conteiner">
+        <!-- Button close -->
+        <button class="modal-products__button" data-modal-close type="button">
+          <svg class="modal-products__icons" width="18" height="18">
+            <use href="./images/sprite.svg#close1"></use>
+          </svg>
+        </button>
+
+        <!-- Contents section -->
+
+        <p class="icecream-title">Chololate icecream</p>
+
+        <!-- Comound group -->
+
+        <div class="comound">
+          <ul class="comound__list">
+            <li class="comound__item">
+              <span class="comound__item-quota">320</span>
+              <span class="comound__item-component">kcal</span>
+            </li>
+            <li class="comound__item">
+              <span class="comound__item-quota">4g</span>
+              <span class="comound__item-component text-long">Protein...</span>
+              <span class="comound__item-component text-short">Prot...</span>
+            </li>
+            <li class="comound__item">
+              <span class="comound__item-quota">8,2g</span>
+              <span class="comound__item-component">Fats</span>
+            </li>
+            <li class="comound__item">
+              <span class="comound__item-quota">40,4g</span>
+              <span class="comound__item-component">Carbs</span>
+            </li>
+          </ul>
+        </div>
+
+        <strong class="ingridient-title">Ingredients</strong>
+
+        <!-- Ingridient group -->
+        <div class="ingridient">
+          <ul class="ingridient__list">
+            <li class="ingridient__item">
+              <span class="ingridient__item-component">Milk</span
+              ><span class="ingridient__item-quota">100ml</span>
+            </li>
+            <li class="ingridient__item">
+              <span class="ingridient__item-component">Belgian chocolate</span
+              ><span class="ingridient__item-quota">20g</span>
+            </li>
+            <li class="ingridient__item">
+              <span class="ingridient__item-component">Cream</span
+              ><span class="ingridient__item-quota">150ml</span>
+            </li>
+            <li class="ingridient__item">
+              <span class="ingridient__item-component">Cocoa powder</span
+              ><span class="ingridient__item-quota">30g</span>
+            </li>
+            <li class="ingridient__item">
+              <span class="ingridient__item-component">Sugar</span
+              ><span class="ingridient__item-quota">40g</span>
+            </li>
+            <li class="ingridient__item">
+              <span class="ingridient__item-component">Vanilla sugar</span
+              ><span class="ingridient__item-quota">10g</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Modal -->
+        <form class="register-form" name="register-form">
+          <div class="register-form__group" role="group">
+            <label class="register-form__label">
+              <input
+                class="register-form__input"
+                type="text"
+                name="user-name"
+                placeholder="Name"
+                required
+              />
+            </label>
+
+            <label class="register-form__label">
+              <input
+                class="register-form__input"
+                type="tel"
+                name="user-phone"
+                placeholder="Phone"
+                required
+              />
+            </label>
+
+            <label class="register-form__label">
+              <textarea
+                class="register-form__message"
+                name="register-messege"
+                rows="10"
+                placeholder="Coment"
+              ></textarea>
+            </label>
+            <button class="register-form__btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>

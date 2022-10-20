@@ -145,19 +145,6 @@
   margin-right: auto;
 }
 
-.franchise-modalclose__btn {
-  @include modal-close();
-
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  @media screen and (min-width: 768px) {
-    top: 20px;
-    right: 20px;
-  }
-}
-
 
 // Location modal
 .location-modal {

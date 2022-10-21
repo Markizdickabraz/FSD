@@ -35,6 +35,7 @@
 
 .franchise-modal__head {
   @include modal_title-fonts;
+  text-align: center;
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
@@ -90,8 +91,6 @@
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84A178;
   border-radius: 10px;
-
-  // background: tomato;
 
   @media screen and (min-width: 768px) {
     width: 368px;

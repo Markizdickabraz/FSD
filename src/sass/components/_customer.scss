@@ -1,34 +1,9 @@
 .customer {
     padding-top: 80px;
     padding-bottom: 48px;
-    // background-color: #fff;
-    // background-image: url('../images/mobile/main/background1@1x.jpg');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-
-    // @media (min-device-pixel-ratio: 2),
-    // (min-resolution: 192dpi),
-    // (min-resolution: 2dppx) {
-    //     background-image: url('../images/mobile/main/background1@2x.jpg');
-    // }
-
-
-    // @media screen and (min-width: 768px) {
-    //     padding-top: 60px;
-    //     padding-bottom: 80px;
-    //     background-image: url('../images/desktop/backgrounds/background1@1x.jpg');
-    // }
-
-    // @media screen and (min-width: 1200px) {
-    //     padding-top: 128px;
-    //     padding-bottom: 100px;
-    //     background-image: url('../images/desktop/backgrounds/background1@2x.jpg');
-    // }
 
     background-image: url('../images/mobile/main/background2@1x.jpg');
-
-
+    background-position: 0 -131px;
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -45,7 +20,7 @@
 
     @media screen and (min-width: 768px) {
         background-image: url('../images/tablet/background2@1x.jpg');
-
+        background-position: 0 -327px;
         @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -62,7 +37,7 @@
 
     @media screen and (min-width: 1200px) {
         background-image: url('../images/desktop/backgrounds/background2@1x.jpg');
-
+        background-position: 0 -422px;
         @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -76,8 +51,6 @@
             background-image: url('../images/desktop/backgrounds/background2@3x.jpg');
         }
     }
-
-    background-position: 0 422px;
 }
 
 .customer-reviews__image {

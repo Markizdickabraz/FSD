@@ -13,6 +13,10 @@ $main-transition-time: 250ms;
 // arrow-for-button($space-before-arrow, $space-after-arrow)
 // $space-before-arrow - відступ від тексту до стрілки
 // $space-after-arrow - відступ від стрілки до краю кнопки (правий паддінг)
+body {
+  // overflow-y: hidden;
+  overflow-x: hidden;
+}
 
 @mixin button-base() {
 
@@ -31,6 +35,7 @@ $main-transition-time: 250ms;
     background-color $main-transition-time $cubic-bezier;
 
   color: getColor('main-text-black');
+
   &:focus {
     color: getColor('modalback-and-textcolor-white');
   }
@@ -69,63 +74,63 @@ $main-transition-time: 250ms;
     border-color: getColor('text-grey');
   }
 }
-  
-  @mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
-    position: relative;
-    padding-right: 5px + $space-before-arrow + $space-after-arrow;
-  
-    &::after {
-      content: '';
-      display: block;
 
-      background-color: getColor('main-text-black');
-      mask-image: url('../images/arrow.svg');
-  
-      height: 8px;
-      width: 5px;
-      position: absolute;
-      top: calc(50% - 4px);
-      right: 0px + $space-after-arrow;
+@mixin arrow-for-button($space-before-arrow, $space-after-arrow) {
+  position: relative;
+  padding-right: 5px + $space-before-arrow + $space-after-arrow;
 
-      transition: background-color $main-transition-time $cubic-bezier;
-    }
+  &::after {
+    content: '';
+    display: block;
 
-    &:focus::after {
-        background-color: getColor('modalback-and-textcolor-white');
-    }
+    background-color: getColor('main-text-black');
+    mask-image: url('../images/arrow.svg');
+
+    height: 8px;
+    width: 5px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 0px + $space-after-arrow;
+
+    transition: background-color $main-transition-time $cubic-bezier;
   }
 
-  @mixin modal-close() {
-    position: relative;
-    width: 16px;
-    height: 16px;
+  &:focus::after {
+    background-color: getColor('modalback-and-textcolor-white');
+  }
+}
+
+@mixin modal-close() {
+  position: relative;
+  width: 16px;
+  height: 16px;
+
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+
+    background-image: url('../images/close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 
     @media screen and (min-width: 768px) {
-        width: 20px;
-        height: 20px;
+      width: 10px;
+      height: 10px;
     }
-
-    &::after {
-        content: '';
-        display: block;
-
-        background-image: url('../images/close.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        transform: translate(-50%, -50%);
-
-        @media screen and (min-width: 768px) {
-            width: 10px;
-            height: 10px;
-        }
-    }
+  }
 }
 
 @mixin button--adaptive() {
@@ -522,12 +527,12 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin modal_placeholder-fonts {
-    font-size: 12px;
-    line-height: 1.40;
+  font-size: 12px;
+  line-height: 1.40;
 
-     @media screen and (min-width: 768px) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 /* Modal Buy now*/

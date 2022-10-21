@@ -15,7 +15,6 @@ $main-transition-time: 250ms;
 // $space-after-arrow - відступ від стрілки до краю кнопки (правий паддінг)
 
 @mixin button-base() {
-  cursor: pointer;
 
   @include base-fonts();
   @include btn-fonts();

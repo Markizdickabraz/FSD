@@ -7,7 +7,7 @@
 }
 
 .is-scrolled {
-  background-color: getColor('main-background-color');
+  background: linear-gradient(0deg, rgba(132, 161, 120, 0.1) 5%, rgba(132, 161, 120, 1) 95%);
 }
 
 .nav-container {
@@ -24,25 +24,12 @@
   }
 }
 
-// .nav__button {
-//   @media screen and (min-width:1199px) {
-//     display: none;
-//   }
-
-//   @media screen and (min-width:767px) and (max-width:1199px) {
-//     margin-left: auto;
-//     margin-right: 38px;
-//   }
-
-//   margin-left: auto;
-// }
 .close-modal__btn {
   position: absolute;
   top: 16px;
   right: 20px;
   border: none;
   background-color: transparent;
-  cursor: pointer;
   overflow: hidden;
 
   @media screen and (min-width:768px) {
@@ -81,7 +68,6 @@
 
   border: none;
   background-color: transparent;
-  cursor: pointer;
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
@@ -93,15 +79,6 @@
     display: none;
   }
 }
-
-// .toggle-button--close {
-//   right: 20px;
-
-//   @media screen and (min-width: 768px) {
-//     top: 30px;
-//     right: 32px;
-//   }
-// }
 
 .header-button {
   @include button();

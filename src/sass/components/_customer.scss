@@ -1,6 +1,6 @@
 .customer {
-    padding-top: 80px;
-    padding-bottom: 48px;
+    padding-top: 51px;
+    padding-bottom: 393px;
 
     background-image: url('../images/mobile/main/background2@1x.jpg');
     background-position: 0 -131px;
@@ -19,6 +19,9 @@
     }
 
     @media screen and (min-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 384px;
+
         background-image: url('../images/tablet/background2@1x.jpg');
         background-position: 0 -327px;
         @media (min-device-pixel-ratio: 2),
@@ -36,6 +39,9 @@
     }
 
     @media screen and (min-width: 1200px) {
+        padding-top: 51px;
+        padding-bottom: 196px;
+
         background-image: url('../images/desktop/backgrounds/background2@1x.jpg');
         background-position: 0 -422px;
         @media (min-device-pixel-ratio: 2),

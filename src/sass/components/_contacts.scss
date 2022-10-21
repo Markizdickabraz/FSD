@@ -1,26 +1,33 @@
 .contact {
-  // background-color: #84a178;
- 
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0) 0,
-    rgba(0, 0, 0, 0) 96px,
-    #84a178 96px,
-    #84a178 100%
-  );
-
-  background-color: transparent;
-
   padding-bottom: 22px;
   margin-top: -345px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 345px,
+    #84a178 345px,
+    #84a178 100%
+  );
 
   @media screen and (min-width: 768px) {
     padding-bottom: 140px;
     margin-top: -304px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 304px,
+      #84a178 304px,
+      #84a178 100%
+    );
   }
 
   @media screen and (min-width: 1200px) {
     padding-bottom: 120px;
     margin-top: -96px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 96px,
+      #84a178 96px,
+      #84a178 100%
+    );
   }
 }
 

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  overflow-x: hidden;
+}
+
 /*fonts*/
 /*body base fonts*/
 /*кнопки*/
@@ -242,7 +246,7 @@ a {
   padding-top: 100px;
   padding-bottom: 63px;
   background-color: #84a178;
-  transform: translateX(100%);
+  transform: translateX(110%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999;
   overflow: scroll;
@@ -1953,80 +1957,53 @@ a {
   height: 100%;
 }
 
-.customers {
+.customer {
   padding-top: 80px;
   padding-bottom: 48px;
-  background-color: #fff;
   background-image: url("../images/mobile/main/background1@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .customers {
+  .customer {
     background-image: url("../images/mobile/main/background1@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
-  .customers {
+  .customer {
     padding-top: 60px;
     padding-bottom: 80px;
     background-image: url("../images/desktop/backgrounds/background1@1x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
-  .customers {
+  .customer {
     padding-top: 128px;
     padding-bottom: 100px;
     background-image: url("../images/desktop/backgrounds/background1@2x.jpg");
   }
 }
 
-.swiper-wrapper list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .customer-reviews__image {
   border-radius: 50%;
-  margin-bottom: 32px;
+  margin: 0 auto 32px auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .customer-reviews__image {
-    margin-bottom: 28px;
-  }
-}
-
-.swiper-slide customer-reviews__item {
-  width: 100%;
-  background-color: var(--modalback-and-textcolor-white);
-  border-radius: 10px;
-  padding: 34px 29px;
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .swiper-slide customer-reviews__item {
-    border-radius: 24px;
-    padding: 28px 80px;
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .swiper-slide customer-reviews__item {
-    width: 968px;
-    padding: 39px 74px;
+    margin: 0 auto 28px auto;
   }
 }
 
 .customer-reviews__feedback {
   font-size: 12px;
-  line-height: 2.55;
+  line-height: 2.58;
   text-align: center;
+  color: #fcfcfc;
 }
 @media screen and (min-width: 768px) {
   .customer-reviews__feedback {
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.86;
   }
@@ -2034,7 +2011,45 @@ a {
 @media screen and (min-width: 1200px) {
   .customer-reviews__feedback {
     font-size: 16px;
-    line-height: 1.86;
+  }
+}
+
+.customer-reviews__wrapper {
+  background-color: #84a178;
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-right: 39px;
+  padding-left: 39px;
+  align-items: center;
+  width: 280px;
+  height: 256px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .customer-reviews__wrapper {
+    margin: 0 auto;
+    padding-top: 29px;
+    padding-bottom: 28px;
+    padding-right: 80px;
+    padding-left: 80px;
+    align-items: center;
+    width: 705px;
+    height: 138px;
+    border-radius: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customer-reviews__wrapper {
+    margin: 0 auto;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-right: 74px;
+    padding-left: 73px;
+    align-items: center;
+    width: 968px;
+    height: 138px;
+    border-radius: 24px;
   }
 }
 
@@ -2043,7 +2058,6 @@ a {
   font-size: 20px;
   line-height: 1.86;
   text-align: center;
-  color: var(--main-text-black);
 }
 @media screen and (min-width: 768px) {
   .customer-reviews__location {
@@ -3019,9 +3033,9 @@ a {
 .modal-products {
   padding: 32px 40px;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   width: 280px;
   background: #fcfcfc;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -3076,6 +3090,8 @@ a {
   width: 132px;
   height: 131px;
   background-image: url(../images/mobile/ingredients_modal/icecream_lm_@1x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   top: -162px;
   margin: 0 auto;
 }
@@ -3233,7 +3249,7 @@ a {
   line-height: 1.4;
   color: #131313;
   height: 42px;
-  border: 1px solid #131313;
+  border: 1px solid #84a178;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 11px 16px;
@@ -3359,6 +3375,26 @@ a {
   display: block;
   width: 121px;
   height: 42px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: 1.22;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 34px;
+  padding-right: 34px;
+  border-radius: 10px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #131313;
+  border: none;
+  background-color: #f8d24e;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: 1.22;
+  font-size: 14px;
+  letter-spacing: 0.04em;
   background-color: #f8d24e;
   border-radius: 10px;
   text-align: center;
@@ -3368,15 +3404,14 @@ a {
   transition-property: background-color;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
-
-.register-form__btn:hover {
+.register-form__btn:focus {
+  color: #fcfcfc;
+}
+.register-form__btn:hover, .register-form__btn:focus {
   background-color: #0a8817;
 }
-
-.register-form__btn:focus {
-  background-color: #0a8817;
-  color: #f5f5f5;
-  outline: transparent;
+.register-form__btn:disabled {
+  background-color: #ababab;
 }
 
 .modal-products__button {

@@ -103,7 +103,7 @@ a {
 }
 
 .is-scrolled {
-  background-color: #84a178;
+  background: linear-gradient(0deg, rgba(132, 161, 120, 0.1) 5%, rgb(132, 161, 120) 95%);
 }
 
 .nav-container {
@@ -126,7 +126,6 @@ a {
   right: 20px;
   border: none;
   background-color: transparent;
-  cursor: pointer;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -172,7 +171,6 @@ a {
   margin-left: auto;
   border: none;
   background-color: transparent;
-  cursor: pointer;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -188,7 +186,6 @@ a {
 }
 
 .header-button {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;
@@ -294,7 +291,6 @@ a {
 }
 
 .toggle-menu-button {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;
@@ -499,7 +495,6 @@ a {
   display: block;
   height: 14px;
   width: 38px;
-  cursor: pointer;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(../images/icon_svg/arrow_white_default.svg);
@@ -1238,10 +1233,8 @@ a {
   margin: 0 auto;
   background-color: transparent;
   border: none;
-  cursor: pointer;
   height: 15px;
   width: 38px;
-  cursor: pointer;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(../images/icon_png/arrow-defoult.png);
@@ -1516,7 +1509,6 @@ a {
 }
 
 .about_btn {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;
@@ -2059,6 +2051,11 @@ a {
   }
 }
 
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 345px, #84a178 345px, #84a178 100%);
+  padding-bottom: 40px;
+}
+
 .contact_item {
   font-family: "Montserrat";
   font-style: normal;
@@ -2090,7 +2087,7 @@ a {
 .contacts__list {
   padding: 40px 32px;
   min-height: 412px;
-  background: var(--white-text-color);
+  background: #fff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
@@ -2453,7 +2450,6 @@ a {
   background-color: #f8d24e;
   border-radius: 50%;
   fill: #84a178;
-  cursor: pointer;
 }
 
 .footer__link:hover,
@@ -2516,7 +2512,6 @@ a {
 }
 
 .franchise__button {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;
@@ -2572,6 +2567,7 @@ a {
   font-family: "Seymour One";
   font-size: 16px;
   line-height: 1.4;
+  text-align: center;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -2581,6 +2577,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .franchise-modal__head {
+    display: block;
     width: 322px;
     margin-left: auto;
     margin-right: auto;
@@ -2630,6 +2627,12 @@ a {
 .franchise-modal__message {
   font-size: 12px;
   line-height: 1.4;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  outline: none;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84A178;
   border-radius: 10px;
@@ -2644,6 +2647,10 @@ a {
   .franchise-modal__input,
 .franchise-modal__message {
     width: 368px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }
 .franchise-modal__input::-moz-placeholder, .franchise-modal__message::-moz-placeholder {
@@ -2686,9 +2693,34 @@ a {
     font-size: 14px;
   }
 }
+.franchise-modal__input:focus,
+.franchise-modal__message:focus {
+  border-color: #f8d24e;
+}
+
+.franchise-modal__input {
+  height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .franchise-modal__input {
+    height: 42px;
+  }
+}
+.franchise-modal__input:invalid {
+  border-color: red;
+}
+
+.franchise-modal__message {
+  height: 64px;
+  resize: none;
+}
+@media screen and (min-width: 768px) {
+  .franchise-modal__message {
+    height: 84px;
+  }
+}
 
 .franchise-modalsubmit__btn {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;
@@ -2722,46 +2754,6 @@ a {
 @media screen and (min-width: 768px) {
   .franchise-modalsubmit__btn {
     font-size: 14px;
-  }
-}
-
-.franchise-modalclose__btn {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-@media screen and (min-width: 768px) {
-  .franchise-modalclose__btn {
-    width: 20px;
-    height: 20px;
-  }
-}
-.franchise-modalclose__btn::after {
-  content: "";
-  display: block;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@media screen and (min-width: 768px) {
-  .franchise-modalclose__btn::after {
-    width: 10px;
-    height: 10px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .franchise-modalclose__btn {
-    top: 20px;
-    right: 20px;
   }
 }
 
@@ -2817,6 +2809,16 @@ a {
 .location-modal__map {
   background-color: #fcfcfc;
 }
+@media screen and (max-width: 767px) {
+  .location-modal__map {
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .location-modal__map {
+    padding: 32px;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .location-modal__frame {
@@ -2851,7 +2853,6 @@ a {
 }
 
 .location-modal__btn {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;
@@ -2873,6 +2874,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 32px;
+  margin-bottom: 32px;
 }
 .location-modal__btn:focus {
   color: #fcfcfc;
@@ -3003,30 +3005,29 @@ a {
 .backdrop {
   display: block;
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 3000;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: auto;
+  overflow: scroll;
 }
 
 /* Оформление формы  products*/
 .modal-products {
   padding: 32px 40px;
   position: absolute;
-  top: 0%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   width: 280px;
   background: #fcfcfc;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border: 2px solid #f8d24e;
   border-radius: 10px;
-  z-index: 1000;
-  overflow: auto;
+  z-index: 30;
 }
 @media screen and (min-width: 768px) {
   .modal-products {
@@ -3208,27 +3209,31 @@ a {
   text-align: center;
   justify-content: center;
 }
+
 .register-form__input::-moz-placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
 }
+
 .register-form__input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
 }
+
 .register-form__input::placeholder {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
 }
+
 .register-form__input {
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
   height: 42px;
-  border: 1px solid #84A178;
+  border: 1px solid #131313;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 11px 16px;
@@ -3269,6 +3274,63 @@ a {
   }
 }
 
+.register-form__input {
+  background-color: rgba(248, 210, 78, 0.1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.register-form__input:invalid:not(:-moz-placeholder-shown) {
+  border-color: red;
+}
+.register-form__input:invalid:not(:-ms-input-placeholder) {
+  border-color: red;
+}
+.register-form__input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+.register-form__input:valid:not(:-moz-placeholder-shown) {
+  border-color: #84a178;
+}
+.register-form__input:valid:not(:-ms-input-placeholder) {
+  border-color: #84a178;
+}
+.register-form__input:valid:not(:placeholder-shown) {
+  border-color: #84a178;
+}
+.register-form__input:focus {
+  outline: none;
+  border: 1px solid #f8d24e;
+}
+
+.register-form__message::-moz-placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+}
+
+.register-form__message:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+}
+
+.register-form__message::placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+}
+.register-form__message::-moz-placeholder:focus {
+  outline: none;
+  border: 1px solid #f8d24e;
+}
+.register-form__message:-ms-input-placeholder:focus {
+  outline: none;
+  border: 1px solid #f8d24e;
+}
+.register-form__message::placeholder:focus {
+  outline: none;
+  border: 1px solid #f8d24e;
+}
+
 .register-form__message {
   resize: none;
   width: 240px;
@@ -3287,47 +3349,17 @@ a {
     width: 368px;
   }
 }
-.register-form__message__message:hover, .register-form__message__message:focus {
+
+.register-form__message:hover,
+.register-form__message:focus {
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
-}
-.register-form__message__message::-moz-placeholder {
-  line-height: 1.4;
-  color: #131313;
-}
-.register-form__message__message:-ms-input-placeholder {
-  line-height: 1.4;
-  color: #131313;
-}
-.register-form__message__message::placeholder {
-  line-height: 1.4;
-  color: #131313;
 }
 
 .register-form__btn {
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  line-height: 1.22;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 34px;
-  padding-right: 34px;
-  border-radius: 10px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: #131313;
-  border: none;
-  background-color: #f8d24e;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  line-height: 1.22;
-  font-size: 14px;
-  letter-spacing: 0.04em;
   display: block;
   width: 121px;
   height: 42px;
+  background-color: #f8d24e;
   border-radius: 10px;
   text-align: center;
   border: none;
@@ -3336,14 +3368,15 @@ a {
   transition-property: background-color;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
-.register-form__btn:focus {
-  color: #fcfcfc;
-}
-.register-form__btn:hover, .register-form__btn:focus {
+
+.register-form__btn:hover {
   background-color: #0a8817;
 }
-.register-form__btn:disabled {
-  background-color: #ababab;
+
+.register-form__btn:focus {
+  background-color: #0a8817;
+  color: #f5f5f5;
+  outline: transparent;
 }
 
 .modal-products__button {
@@ -3373,6 +3406,9 @@ a {
 .header-modal {
   position: absolute;
   padding: 40px;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
   width: 280px;
   max-width: 100%;
   background-color: #fcfcfc;
@@ -3696,7 +3732,6 @@ a {
 }
 
 .button-form {
-  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   line-height: 1.22;

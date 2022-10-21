@@ -253,9 +253,10 @@
 .about-modal-box {
   position: absolute;
   padding: 30px 28px;
-  top: 0;
-  left: 50%;
+  top: 20px;
+  left: 50px;
   translate: transparent (50%);
+  transform: translate (50%);
 
   width: 280px;
   max-width: 100%;

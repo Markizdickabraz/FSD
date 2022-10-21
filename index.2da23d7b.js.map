@@ -1,0 +1,1 @@
+{"mappings":"AAAAA,EAAE,mBAAmBC,MAAM,CACzBC,aAAc,EACdC,eAAgB,EAChBC,UAAU,EACVC,cAAe","sources":["src/js/gallery.js"],"sourcesContent":["$('.gallery-slider').slick({\n  slidesToShow: 1,\n  slidesToScroll: 1,\n  autoplay: true,\n  autoplaySpeed: 2000,\n});"],"names":["$","slick","slidesToShow","slidesToScroll","autoplay","autoplaySpeed"],"version":3,"file":"index.2da23d7b.js.map"}

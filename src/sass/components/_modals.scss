@@ -587,7 +587,7 @@
   line-height: 1.4;
   color: getColor('main-text-black');
   height: 42px;
-  border: 1px solid getColor('main-text-black');
+  border: 1px solid #84a178;;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 11px 16px;
@@ -673,6 +673,8 @@
   display: block;
   width: 121px;
   height: 42px;
+  @include button();
+  @include base-fonts;
 
   background-color: getColor('main-yellow');
   border-radius: 10px;
@@ -684,15 +686,15 @@
   transition: $cubic-bezier $main-transition-time;
 }
 
-.register-form__btn:hover {
-  background-color: getColor('bright-green-btn');
-}
+// .register-form__btn:hover {
+//   background-color: getColor('bright-green-btn');
+// }
 
-.register-form__btn:focus {
-  background-color: getColor('bright-green-btn');
-  color: #f5f5f5;
-  outline: transparent;
-}
+// .register-form__btn:focus {
+//   background-color: getColor('bright-green-btn');
+//   color: #f5f5f5;
+//   outline: transparent;
+// }
 
 .modal-products__button {
   display: flex;

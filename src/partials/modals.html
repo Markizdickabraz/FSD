@@ -6,13 +6,15 @@
     <div class="location-modal__map">
       <form action="https://goo.gl/maps/6LRrpXxZvP9P5QQD7" method="get" target="_blank">
         <strong class="location-modal__head">Our Locations</strong>
-        
-        <audio src="./images/probass-hardi.mp3" autoplay preload="auto"></audio>
-       
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.8469023634775!2d30.509866615731152!3d50.443952279474466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef818956939%3A0x8602e5546b047dc1!2z0J3QsNGG0LjQvtC90LDQu9GM0L3Ri9C5INCQ0L3RgtCw0YDQutGC0LjRh9C10YHQutC40Lkg0J3QsNGD0YfQvdGL0Lkg0KbQtdC90YLRgA!5e0!3m2!1sru!2sua!4v1666295799428!5m2!1sru!2sua" 
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        
+        <!-- <audio src="./images/probass-hardi.mp3" autoplay preload="auto"></audio> -->
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.8469023634775!2d30.509866615731152!3d50.443952279474466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef818956939%3A0x8602e5546b047dc1!2z0J3QsNGG0LjQvtC90LDQu9GM0L3Ri9C5INCQ0L3RgtCw0YDQutGC0LjRh9C10YHQutC40Lkg0J3QsNGD0YfQvdGL0Lkg0KbQtdC90YLRgA!5e0!3m2!1sru!2sua!4v1666295799428!5m2!1sru!2sua"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
         <button type="submit" class="location-modal__btn">Open map</button>
 
       </form>
@@ -45,15 +47,16 @@
 
       <div class="franchise-modal__group" role="group">
         <label class="franchise-modal__item">
-          <input type="text" class="franchise-modal__input" name="name" placeholder="Name" requared>
+          <input requared type="text" class="franchise-modal__input" name="name" placeholder="Name">
         </label>
 
         <label class="franchise-modal__item">
-          <input type="tel" class="franchise-modal__input" name="tel" pattern="[0-9]*" maxlength="12" placeholder="Phone" requared>
+          <input requared type="tel" class="franchise-modal__input" name="tel" pattern="[0-9]*" maxlength="12"
+            placeholder="Phone">
         </label>
 
         <label class="franchise-modal__item">
-          <input type="email" class="franchise-modal__input" name="email" placeholder="Email" requared>
+          <input requared type="email" class="franchise-modal__input" name="email" placeholder="Email">
         </label>
 
         <label class="franchise-modal__item">
@@ -143,14 +146,14 @@
 
       <div class="form-fields">
         <label class="form-fields__field">
-          <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Z]+$" maxlength="30"
-            class="form-fields__input" title="Username should only contain letters." required />
+          <input required type="text" name="name" placeholder="Name" pattern="^[a-zA-Z]+$" maxlength="30"
+            class="form-fields__input" title="Username should only contain letters." />
         </label>
 
         <label class="form-fields__field">
 
-          <input type="tel" name="tel" placeholder="Phone" pattern="^[a-zA-Z0-9]+$" minlength="10" maxlength="12"
-            class="form-fields__input" title="Phone should only contain numbers." required />
+          <input required type="tel" name="tel" placeholder="Phone" pattern="^[a-zA-Z0-9]+$" minlength="10"
+            maxlength="12" class="form-fields__input" title="Phone should only contain numbers." />
 
         </label>
 
@@ -235,13 +238,13 @@
     <form class="register-form" name="register-form">
       <div class="register-form__group" role="group">
         <label class="register-form__label">
-          <input class="register-form__input" type="text" name="user-name" placeholder="Name" required />
+          <input required class="register-form__input" type="text" name="user-name" placeholder="Name" />
         </label>
 
         <label class="register-form__label">
 
-          <input class="register-form__input" type="tel" name="user-phone" placeholder="Phone" minlength="10"
-            required />
+          <input required class="register-form__input" type="tel" name="user-phone" placeholder="Phone"
+            minlength="10" />
 
         </label>
 

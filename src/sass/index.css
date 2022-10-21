@@ -39,6 +39,7 @@ body {
   line-height: 1.22;
   font-size: 14px;
   letter-spacing: 0.04em;
+  background-color: #84a178;
 }
 
 .container {
@@ -337,7 +338,7 @@ a {
 }
 .hero__container {
   max-width: 480px;
-  height: 100vh;
+  height: 550px;
   padding-top: 110px;
   position: relative;
   background-size: 310px 380px, 440px 70px;
@@ -2311,21 +2312,17 @@ a {
 
 .footer {
   background-color: #84a178;
-}
-@media screen and (max-width: 767px) {
-  .footer {
-    padding-top: 1100px;
+  /*@media screen and (max-width:767px) {
+      padding-top: 1100px;
   }
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    padding-top: 366px;
+
+  @media screen and (min-width:768px) {
+      padding-top: 366px;
   }
-}
-@media screen and (min-width: 1200px) {
-  .footer {
-    padding-top: 668px;
-  }
+
+  @media screen and (min-width:1200px) {
+      padding-top: 668px;
+  }*/
 }
 
 .footer__text {

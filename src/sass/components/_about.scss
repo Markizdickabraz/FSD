@@ -15,7 +15,7 @@
 
 .about__undertitle {
     @include section_label-fonts;
-    
+
     font-weight: 700;
     line-height: calc(22 / 18);
     text-align: center;
@@ -37,7 +37,7 @@
 .about__title {
     @include section_title-fonts;
 
-    margin-bottom: 32px;
+    margin-bottom: 12px;
 
     line-height: calc(38 / 30);
     text-align: center;
@@ -46,13 +46,108 @@
 
     @media screen and (min-width: 768px) {
         line-height: calc(43 / 34);
-        margin-bottom: 72px;
+        margin-bottom: 20px;
     }
 
     @media screen and (min-width: 1200px) {
         line-height: calc(45 / 36);
+        margin-bottom: 20px;
+    }
+}
+
+.about__mollybox {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 5px;
+}
+
+.about__molly {
+    @include section_label-fonts;
+
+    font-size: 12;
+    font-weight: 400;
+    line-height: calc(12 / 10);
+    text-align: center;
+
+    color: getColor('modalback-and-textcolor-white');
+
+    @media screen and (min-width: 768px) {
+        font-size: 14;
+        line-height: calc(12 / 10);
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14;
+        line-height: calc(14 / 12);
+        letter-spacing: 0.04;
+    }
+}
+
+.about__musicmollybox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 72px;
+    }
+
+    @media screen and (min-width: 1200px) {
         margin-bottom: 82px;
     }
+}
+
+.about__paly {
+    width: 50px;
+    height: 50px;
+}
+
+.about__musicmollybox {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        opacity: 0;
+        transform: translateY(101%);
+        transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+
+        .about__link:hover &,
+        .about__link:focus & {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.about__musicframebox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+
+    .about__link:hover &,
+    .about__link:focus & {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.about__musicframe {
+    width: 80px;
+    height: 50px;
+    border: none;
 }
 
 .about__description {

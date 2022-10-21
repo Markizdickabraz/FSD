@@ -1,3 +1,13 @@
+.contact {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 345px,
+    #84a178 345px,
+    #84a178 100%
+  );
+  padding-bottom: 40px;
+}
+
 .contact_item {
   font-family: 'Montserrat';
   font-style: normal;
@@ -27,7 +37,7 @@
 .contacts__list {
   padding: 40px 32px;
   min-height: 412px;
-  background: var(--white-text-color);
+  background: #fff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 

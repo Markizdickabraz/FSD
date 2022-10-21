@@ -253,10 +253,9 @@
 .about-modal-box {
   position: absolute;
   padding: 30px 28px;
-  top: 20px;
- left: 50px;
+  top: 0;
+  left: 50%;
   translate: transparent (50%);
-  transform: translate (50%);
 
   width: 280px;
   max-width: 100%;
@@ -443,7 +442,7 @@
   width: 132px;
   height: 131px;
   background-image: url(../images/mobile/ingredients_modal/icecream_lm_@1x.png);
-  background-size: contain ;
+  background-size: contain;
   background-repeat: no-repeat;
   top: -162px;
   margin: 0 auto;
@@ -590,7 +589,8 @@
   line-height: 1.4;
   color: getColor('main-text-black');
   height: 42px;
-  border: 1px solid #84a178;;
+  border: 1px solid #84a178;
+  ;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 11px 16px;
